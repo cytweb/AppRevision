@@ -27,7 +27,7 @@ mixin：sass宏mixin
               }
           }
           .commonlyUsed,.sysFourMenu{
-            padding: 10px 0px;
+            padding-bottom: 5px;
             li{ 
               a{
                 width: 100%;height: 100%;display: inline-block;
@@ -42,7 +42,6 @@ mixin：sass宏mixin
         }
         .HomeSnapShot {margin-top: 2.5rem;margin-bottom: 4rem;}
         .HomeShortcutFunction{
-         
           &>section{
             width: 100%;overflow-x: auto;
             &>aside{
@@ -53,29 +52,25 @@ mixin：sass宏mixin
                 float: left; 
                 text-align: left;
                 &>div.pptPatternHeader{
-                 
                   padding: 10px;
                   background: #{$situationContainerBgc};
                   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
-                  border-radius: 12px 12px 0px 0px;
-
+                  border-radius: 12px 12px 0px 0px;    position: relative;
                   &>span:nth-child(1){
-                    position: relative;margin-bottom: 15px;
-                      &>a{
-                        width: 60px;
-                        height: 60px;
-                        line-height: 57px;
-                        i{color: #{$allFontColor};font-size: 2rem;}text-align: center;background: url(../../Image/phone/rect.png) no-repeat center/100% 100%;}
+                    position: relative;margin-bottom: 15px;padding-left: 80px;
                   };
-                  &>span:nth-child(2){
-                    &>a{
+                  &>a{
                     width: 60px;
                     height: 60px;
-                    line-height: 57px;
-                      i{color: #{$allFontColor};font-size: 2rem;}
-                    text-align: center;background: url(../../Image/phone/rect.png) no-repeat center/100% 100%;}
+                    line-height: 55px;
+                    i{color: #{$allFontColor};font-size: 2rem;}
+                    text-align: center;background: url(../../Image/phone/rect.png) no-repeat center/100% 100%;
+                    position: absolute;
+                  }   
+                  &>span:nth-child(2){
+
                   }
-                  h3{text-align: left;    white-space: nowrap;}
+                  h3{text-align: left;white-space: nowrap;}
                 }
                 p{
                   color: #{$allFontColor};margin: 0;text-indent: 10px;
@@ -92,8 +87,6 @@ mixin：sass宏mixin
           margin-top: 2.5rem; 
           &>ol{background: #{$situationContainerBgc}; box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10); margin-bottom: 5px;}
           &>ol:nth-child(1){border-radius: 12px 12px 0px 0px;}
-          // &>ol:nth-child(2){border-radius: 0px 0px 12px 12px;}
-
         }
 
         .statisticsTable{
@@ -150,7 +143,6 @@ mixin：sass宏mixin
 
 
 //popover
-
 .popup-public{
   z-index: 19999;left: 0!important;top: 0!important;
   .publicHeader{

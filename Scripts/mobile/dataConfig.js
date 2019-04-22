@@ -46,10 +46,23 @@ var sysFourMenu = [{
     equipNo: '',
     setNo: '',
     value: null,
-} ];
+},
+];
 
 // 常用
-var commonlyUsed = [{
+var commonlyUsed = [
+{
+    name: '场景配置',
+    name_en: 'Equipment linkage',
+    href_zh: '/equipLinkage/',
+    href_en: '/mobile-en/equipLinkage_en/',
+    color: '#FFE27A 0%, #F7A474 100%',
+    icon: 'iconfont icon-app_icons--',
+    equipNo: '',
+    setNo: '',
+    value: null,
+},
+{
     name: '列表视频',
     name_en: 'List video',
     href_zh: '/Video/',
@@ -70,7 +83,7 @@ var commonlyUsed = [{
     setNo: '',
     value: null,
 }, {
-    name: 'PPT',
+    name: 'PPT设置',
     name_en: 'PPT',
     href_zh: '/mettingPPT/',
     href_en: '/mobile-en/mettingPPT_en/',
@@ -79,7 +92,8 @@ var commonlyUsed = [{
     equipNo: '',
     setNo: '',
     value: null,
-}, {
+}];
+var welComePage = [{
     name: '欢迎词',
     name_en: 'Welcome speech',
     href_zh: '/welcomeWords/',
@@ -90,6 +104,8 @@ var commonlyUsed = [{
     setNo: '',
     value: null,
 }];
+
+
 
 // 列表数据模型
 var KOvm = [{

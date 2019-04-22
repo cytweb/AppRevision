@@ -632,7 +632,7 @@ function get_no_val(that, set_equip, set_no, values) {
 function get_no_set(dt, values) {
 
     //动画
-    if($(dt).hasClass("homeBtn")) { 
+    if($(dt).parent().hasClass("popoverSceneBtn")) { 
         $(dt).addClass("startAnimation");
         tipsBottom($(dt).find("p").text());
         setTimeout(function() {

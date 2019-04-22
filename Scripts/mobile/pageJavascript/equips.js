@@ -144,7 +144,7 @@ function treeHTML(len, name, equip_no, thisDom) {
                                         </div>
                                     </a>
                                 </li>
-                                `
+                                `;
                 thisDom.append(newRow);
             }
             thisDom.attr('equiplist', 'true');

@@ -15,6 +15,7 @@ function onHomePage() {
             <a class="popup-close" href="${window.localStorage.languageList == 1 ?"/mobile-en/equipConfigList_en/":"/equipConfigList/"}">${window.localStorage.languageList == 1 ?"System configuration":"系统配置"}</a>
             <a class="popup-close" href="${window.localStorage.languageList == 1 ?"/mobile-en/schedule_en/":"/schedule/"}">${window.localStorage.languageList == 1 ?"Alarm schedule":"报警排表"}</a>
             <a class="popup-close" href="${window.localStorage.languageList == 1 ?"/mobile-en/equipLinkage_en/":"/equipLinkage/"}">${window.localStorage.languageList == 1 ?"Equipment linkage":"设备联动"}</a>
+            <a class="popup-close" href="${window.localStorage.languageList == 1 ?"/mobile-en/equipLinkage_en/":"/SceneConfiguration/"}">${window.localStorage.languageList == 1 ?"Scene configuration":"场景配置"}</a>
         </div>`;
 
         ststemSet("系统模块","configTool",html);
@@ -236,7 +237,9 @@ function getJurisdictionData() {
                                 break;
                             case "HomeSystemMenu":
                                 commonlyUsedFun("sysFourMenu", "25", sysFourMenu);
-                                commonlyUsedFun("commonlyUsed", "25", commonlyUsed);
+                                commonlyUsedFun("sysInitFun", "25", commonlyUsed);
+                                commonlyUsedFun("welComePage", "25", welComePage);
+
                                 break;
                             default:
                                 break;
@@ -266,39 +269,26 @@ function functionalModule(className,htmlStr) {
             html = `<li class="HomeShortcutFunction">
               <section>
                  <aside>
-                  <div class="pptPattern_container">
+                  <div class="pptPattern_container" onclick="videoExplain()">
                        <div class="pptPatternHeader row">
                           <span class="col-100">
                              <h3>视频讲解</h3>
                              遥控器
                           </span>
-                          <span class="row col-100">
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_jj"></i></a>
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_s_t"></i></a>
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_stop_0"></i></a>
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_j_x"></i></a>
-    
-                          </span>
+                          <a><i class="iconfont icon-f7_icon_hf"></i></a>
                        </div>
-                       <p>当前播放: <label>敢为平台演示.mp4</label></p>
+                       <p>当前文件: <label>敢为平台演示.mp4</label></p>
 
                   </div>
-                  <div class="pptPattern_container">
+                  <div class="pptPattern_container"  onclick="pptPlay()">
                        <div class="pptPatternHeader row">
                           <span class="col-100">
-                             <h3>视频讲解</h3>
+                             <h3>PPT播放</h3>
                              遥控器
                           </span>
-                          <span class="row col-100">
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_ppt"></i></a>
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_c_l"></i></a>
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_prev"></i></a>
-                             <a href="#" class="col-25"><i class="iconfont icon-f7_next"></i></a>
-    
-                          </span>
+                           <a><i class="iconfont icon-f7_icon_hf"></i></a>
                        </div>
-                       <p>当前播放: <label>敢为平台演示.mp4</label></p>
-
+                       <p>当前文件: <label>敢为平台演示.pptx</label></p>
                   </div>
                   </aside>
               </section>                                  
@@ -315,7 +305,8 @@ function functionalModule(className,htmlStr) {
         case "HomeSystemMenu":
             html = `<li class="HomeSystemMenu">
                     <ol class="row sysFourMenu"></ol>
-                    <ol class="row commonlyUsed"></ol>
+                    <ol class="row commonlyUsed sysInitFun"></ol>
+                    <ol class="row commonlyUsed welComePage"></ol>
                    </li>`;
             break;
         default:
@@ -341,17 +332,32 @@ function ststemSet(title,id,html){
 
 //全局场景
 function AllScene(){
-         var htmlStart = `<div class="popoverSceneBtn row">`,htmlContent="";    
-         KOvm.forEach(function(item,index){
-             htmlContent += `<a href="#" class="homeBtn col-25" id="homeBtn${index}" set_equip="${item.equipNo}" set_no="${item.setNo}" onclick="get_no_set(this,null)" >
-             <span>
-               <i class="${item.icon}"></i>
-             </span>
-             <p>
-                ${window.localStorage.languageList == 1 ?item.name_en:item.name}
-             </p>
-             </a>`;
-         });    
+     var htmlStart = `<div class="popoverSceneBtn row">`,htmlContent="";    
+     KOvm.forEach(function(item,index){
+         htmlContent += `<a href="#" class="homeBtn col-25" id="homeBtn${index}" set_equip="${item.equipNo}" set_no="${item.setNo}" onclick="get_no_set(this,null)" >
+         <span>
+           <i class="${item.icon}"></i>
+         </span>
+         <p>
+            ${window.localStorage.languageList == 1 ?item.name_en:item.name}
+         </p>
+         </a>`;
+     });    
+    var htmlEnd = `</div>`;
+    ststemSet("场景控制","sceneBtnControl",htmlStart+htmlContent+htmlEnd);  
+}
+
+//视频讲解
+function videoExplain(){
+         var htmlStart = `<div class="popoverVideoExplain row">`,htmlContent="";    
+      
         var htmlEnd = `</div>`;
-        ststemSet("场景控制","sceneBtnControl",htmlStart+htmlContent+htmlEnd);  
+        ststemSet("视频讲解","sceneBtnControl",htmlStart+htmlContent+htmlEnd);  
+}
+//ppt播放
+function pptPlay(){
+         var htmlStart = `<div class="popoverPptPlay row">`,htmlContent="";    
+      
+        var htmlEnd = `</div>`;
+        ststemSet("PPT播放","sceneBtnControl",htmlStart+htmlContent+htmlEnd);  
 }
