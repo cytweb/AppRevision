@@ -1,0 +1,50 @@
+﻿<div class="page" data-page="equips_en" id="equips_en">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <!-- 标题 -->
+            <div class="left sliding auth_name_get">
+               Device list
+            </div>
+            <div class="right">
+                <a class="link icon-only panel-open" href="/setPage/" id="setPageTool">
+                    <i class="iconfont icon-f7_right_user">
+                    </i>
+                </a>
+                <a href="#" id="scan" onclick="RichScan()">
+                    <i class="iconfont icon-scanIcon">
+                    </i>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <form class="searchbar searchbarEquip">
+        <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+                <input placeholder="Device Name Search" style="font-size: 0.938rem;" type="search">
+                    <i class="searchbar-icon">
+                    </i>
+                    <span class="input-clear-button">
+                    </span>
+                </input>
+            </div>
+            <span class="searchbar-disable-button" style="font-size: 0.938rem;">
+                Cancel
+            </span>
+        </div>
+    </form>
+    <div class="page-content ptr-content equipPageContent" data-ptr-distance="55">
+        <!-- 默认的下拉刷新层 -->
+        <div class="ptr-preloader">
+            <div class="preloader">
+            </div>
+            <div class="ptr-arrow">
+            </div>
+        </div>
+        <div class="searchbar-backdrop">
+        </div>
+        <div class="list-block list-page list" style="margin:0;">
+            <ul class="equip-list searchbar-found">
+            </ul>
+        </div>
+    </div>
+</div>

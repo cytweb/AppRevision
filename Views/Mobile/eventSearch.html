@@ -1,0 +1,88 @@
+<div class="page" data-page="eventSearch" id="eventSearch" style="box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left sliding auth_name_get">
+                事件查询
+            </div>
+            <div class="right">
+                <a href="" class="link panel-open"  id="sceneBtnControl" onclick="AllScene()">
+                    <i class="iconfont icon-sceneNew"></i>
+                     <p>场景切换</p>
+                </a>
+                <a href="#" onclick="RichScan()" id="scan"> 
+                    <i class="iconfont icon-scanIcon"></i> 
+                    <p>扫一扫</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content eventSearchPageContent ">
+        <div class="eventSearchContent">
+            <div class="event-search-box">
+                <div class="half-select-box">
+                    <label>时间跨度：</label>
+                    <div class="half-select-box-input">
+                        <input type="text" placeholder="时间段选择" readonly="readonly" id="eventSearchTimeId" />
+                    </div>
+                </div>
+                <button class="col button button-fill color-blue" onclick="searchEquipItems()">查询</button>
+                <div class="half-select-box-bottom">
+                    <label>设备事件：</label>
+                    <input type="text" placeholder="请选择设备" id="eventSearchEquipId" />
+                    <input type="text" placeholder="请选择事件" id="eventSearchTypeId" />
+
+                </div>
+            </div>
+            <!-- Tabs, tabs wrapper -->
+            <div class="tabs">
+                <!-- Tab 1, active by default -->
+                <div id="tab1" class="tab tab-active">
+                    <div class="content-block tab-content-box">
+                        <div class="tab-table-header">
+                            <span>时间</span>
+                            <span>设备名称</span>
+                            <span>设备事件</span>
+                        </div>
+                        <ul id="eventSearchEquipsId">
+                            <!--<li>
+                                <span>2018/12/23 18:30:47</span>
+                                <span>登录信息:用户“ admin ”在服务端登录成功!"</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tab 2 -->
+                <div id="tab2" class="tab">
+                    <div class="content-block tab-content-box">
+                        <div class="tab-table-header">
+                            <span>时间</span>
+                            <span>设备名称</span>
+                            <span>设置事件</span>
+                        </div>
+                        <ul id="eventSearchSetId">
+                            <!--<li>
+                                <span>2018/12/23 18:30:47</span>
+                                <span>登录信息:用户“ admin ”在服务端登录成功!"</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tab 3 -->
+                <div id="tab3" class="tab">
+                    <div class="content-block tab-content-box">
+                        <div class="tab-table-header">
+                            <span>时间</span>
+                            <span>系统事件</span>
+                        </div>
+                        <ul id="eventSearchSystemId">
+                            <!--<li>
+                                <span>2018/12/23 18:30:47</span>
+                                <span>登录信息:用户“ admin ”在服务端登录成功!"</span>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

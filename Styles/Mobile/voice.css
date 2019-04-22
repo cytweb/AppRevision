@@ -1,0 +1,331 @@
+.popup.popup-voices {
+	top: 0px !important;
+	height: 100% !important;
+	width: 100%;
+	left: 0;
+	margin: 0;
+}
+
+.popup-voices {
+	background: rgba(51, 51, 51, 0.70);
+}
+
+.video-content-btn {
+	width: 70px;
+	height: 35px;
+	border-radius: 0 0 70px 70px;
+	/*background-color: #F2F3F5;*/
+	position: absolute;
+	left: 50%;
+	bottom: 15px;
+	margin-left: -35px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.video-content-btn div {
+	width: 60px;
+	height: 60px;
+	background: #2d8cf0;
+	border-radius: 50%;
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	    box-shadow: 0px 0px 50px white;
+}
+
+
+.video-content-btn-Curtain {
+	width: 80px;
+	height: 35px;
+	border-radius: 0 0 80px 80px;
+	/*background-color: #F2F3F5;*/
+	position: absolute;
+	left: 50%;
+	bottom: 10%;
+	margin-left: -40px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.video-content-btn-Curtain div {
+	width: 80px;
+	height: 80px;
+	background: #2d8cf0;
+	border-radius: 50%;
+	margin-bottom: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	    box-shadow: 0px 0px 50px white;
+}
+
+
+.video-content-btn div img {
+	height: 60%;
+	width: auto;
+}
+
+.popup-voices .voice-header {
+	font-family: Source Han Sans Bold;
+	font-size: 1rem;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	top: 3%;
+}
+
+.popup-voices .voice-header .voice-header-back {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 5%;
+	text-align: left;
+}
+
+.popup-voices .voice-header .voice-header-back .icon-back{
+	background-image: none;
+}
+
+.popup-voices .voice-container {
+	width: 100%;
+	height: 70%;
+	padding: 0 5%;
+	font-family: Source Han Sans Bold;
+	font-size: 1rem;
+	color: #222222;
+	letter-spacing: 1px;
+	position: relative;
+	top: 3%;
+	overflow-y: auto;
+}
+
+.popup-voices .voice-container::-webkit-scrollbar {
+	/*滚动条整体样式*/
+	width: 0px;
+	/*高宽分别对应横竖滚动条的尺寸*/
+	height: 4px;
+}
+
+.popup-voices .voice-container::-webkit-scrollbar-thumb {
+	/*滚动条里面小方块*/
+	border-radius: 5px;
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.popup-voices .voice-container::-webkit-scrollbar-track {
+	/*滚动条里面轨道*/
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+	border-radius: 0;
+	background: rgba(0, 0, 0, 0.1);
+}
+.clear:after{content: "";width: 100%;height: 1px;display: inline-block;}
+.popup-voices .voice-container .pannel-chat-info {
+	width: 100%;
+	height: auto;
+	clear: both;
+	position: relative;
+}
+
+
+.popup-voices .voice-container .pannel-chat-info .chart-content {
+	padding: 10px 14px;
+	max-width: 70%;
+	margin-top: 13px;
+	float: left;
+	background: #fff;
+	color: rgb(102, 102, 102);
+	font-size: 1rem;
+	letter-spacing: 1px;
+	font-family: Source Han Sans Bold;
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
+	border-bottom-left-radius: 2px;
+	border-top-left-radius: 15px;
+	position: relative;
+}
+
+.popup-voices .voice-container .pannel-chat-info .chart-content>label{    color: white;
+    position: absolute;
+    left: -40%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;}
+
+.popup-voices .voice-container .pannel-chat-info .chart-content span {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*text-align: justify*/
+}
+
+.stay-right {
+	color: #FFFFFF !important;
+	background: #2d8cf0 !important;
+	float: right !important;
+	border-bottom-right-radius: 2px !important;
+	border-top-right-radius: 15px !important;
+	border-bottom-left-radius: 12px !important;
+	border-top-left-radius: 12px !important;
+}
+
+.chart-content-old {
+	opacity: 0.6;
+}
+
+.popup-voices .voice-arrow-cancel {
+	width: 87px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	margin-left: -43.5px;
+	bottom: 170px;
+	color: #FFFFFF;
+	font-size: 0.75rem;
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+	display: none;
+}
+
+.popup-voices .voice-arrow-dialog {
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 24px;
+    white-space: nowrap;
+    transform: translateX(-50%);
+}
+
+.popup-voices .voice-arrow-box {
+	width: 100px;
+	height: 80px;
+	position: absolute;
+	left: 50%;
+	margin-left: -50px;
+	bottom: 70px;
+	display: none;
+}
+
+.popup-voices .voice-arrow-box .voice-arrow-ani {
+	width: 40px;
+	height: 13px;
+	margin: auto;
+	background: url(/Image/arrow_ani.png) no-repeat center center/100% 100%;
+	position: relative;
+	top: 10px;
+	opacity: .2;
+}
+
+.popup-voices .voice-arrow-box .voice-arrow-ani:nth-child(2) {
+	top: 8px;
+	opacity: .6;
+}
+
+.popup-voices .voice-arrow-box .voice-arrow-ani:nth-child(3) {
+	top: 6px;
+	opacity: 1;
+}
+
+.IndexIconAnimation1 {
+	animation: IndexIconAnimation1 1.5s 0s both infinite;
+}
+
+.IndexIconAnimation2 {
+	animation: IndexIconAnimation2 1.5s 0s both infinite;
+}
+
+.IndexIconAnimation3 {
+	animation: IndexIconAnimation3 1.5s 0s both infinite;
+}
+
+@keyframes IndexIconAnimation1 {
+	0% {
+		opacity: 0.6;
+		/*初始状态 透明度为0*/
+	}
+	33.33% {
+		opacity: 1;
+		/*结尾状态 透明度为1*/
+	}
+	100% {
+		opacity: 1;
+		/*结尾状态 透明度为1*/
+	}
+}
+
+@keyframes IndexIconAnimation2 {
+	0% {
+		opacity: 0.4;
+		/*初始状态 透明度为0*/
+	}
+	33.33% {
+		opacity: 0.4;
+		/*结尾状态 透明度为1*/
+	}
+	66.66% {
+		opacity: 1;
+		/*结尾状态 透明度为1*/
+	}
+	100% {
+		opacity: 1;
+		/*结尾状态 透明度为1*/
+	}
+}
+
+@keyframes IndexIconAnimation3 {
+	0% {
+		opacity: 0.2;
+		/*初始状态 透明度为0*/
+	}
+	33.33% {
+		opacity: 0.2;
+		/*结尾状态 透明度为1*/
+	}
+	66.66% {
+		opacity: 0.2;
+		/*结尾状态 透明度为1*/
+	}
+	100% {
+		opacity: 1;
+		/*结尾状态 透明度为1*/
+	}
+}
+
+.homeHuanAnimation {
+	-webkit-animation-name: pulsate;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	/*-moz-box-shadow: 0px 0px 30px  #3cdfdf;*/
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+		-webkit-box-shadow: 0px 0px 0px #2d8cf0;
+	}
+	25% {
+		-webkit-box-shadow: 0px 0px 35px #2d8cf0;
+	}
+	50% {
+		-webkit-box-shadow: 0px 0px 0px #2d8cf0;
+	}
+	75% {
+		-webkit-box-shadow: 0px 0px 35px #2d8cf0;
+	}
+	100% {
+		-webkit-box-shadow: 0px 0px 0px #2d8cf0;
+	}
+}

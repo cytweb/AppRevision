@@ -1,0 +1,100 @@
+﻿<div class="page " data-page="equipLinkageModify" id="equipLinkageModify">
+    <div class="navbar">
+        <div class="navbar-inner">
+           <div class="left sliding auth_name_get">
+                <a href="#" class="back link">
+                    <i class="iconfont icon-back"></i>
+                </a>  
+               设备联动
+            </div>
+            <div class="right">
+                <a class="link icon-only panel-open" href="/setPage/">
+                    <i class="iconfont icon-f7_right_user">
+                    </i>
+                </a>
+              
+            </div>                    
+        </div>
+    </div>
+    <div class="page-content scheduleModifyPageContent" >
+
+        <div class="scheduleModifyContainer equipLinkAgeModifyContainer list" >
+          <ul class="equipLinkageList">
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">触发设备</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请选择触发类型" class="equipTiggerName" id="equipTiggerName">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">触发类型</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请选择触发类型" class="equipTiggerType" id="equipTiggerType">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">触发点</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请选择触发点" class="equipTiggerSpot" id="equipTiggerSpot">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">延时(ms)</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请输入延时时间" class="equipTiggerTime" id="equipTiggerTime">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">联动设备</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请选择联动设备" class="equipTigger_Link" id="equipTigger_Link">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">联动命令</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请选择联动命令" class="equipTiggerCom" id="equipTiggerCom">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">备注信息</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="请输入备注信息" class="equipTiggerInfo" id="equipTiggerInfo">
+                  </div>
+                </div>
+              </div>
+            </li>                        
+          </ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">取消</button>
+          <button class="comfirmModify" id="equipLinkageModifyId" dataID="">保存</button>
+        </div>  
+
+    </div>
+</div>
+

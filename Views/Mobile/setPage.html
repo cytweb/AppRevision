@@ -1,0 +1,80 @@
+﻿
+    <div data-page="setPage" class="page" id="setPage">
+        <div  class="page-content setPageContainer" style="padding-top: 0!important;">
+              <div class="userClassName">
+                  <i class="iconfont icon-f7_right_user"></i>
+                  <p ></p>
+              </div>
+            <div class="list simple-list">
+            <ul>
+<!--                 <li>
+                    <a href="#" class="item-link smart-select smart-select-init" id="voiceList" onchange="onVoiceList()" data-page-back-link-text="">
+                        <select name="voiceTop">
+                            <option value="1" selected="selected" data-value = "1">讯飞</option>
+                             <option value="2" data-value = "2">微软</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-f7_voice"></i></div>
+                            <div class="item-inner" id="voiceListName">
+                                <div class="item-title">语音服务</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>   -->   
+                <li>
+                    <a href="#" class="item-link smart-select smart-select-init" id="languageList" onchange="selectLanguage()" data-page-back-link-text="">
+                        <select name="languageTop">
+                            <option value="0" selected="selected">中文</option> 
+                            <option value="1" >英文</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-f7_language"></i></div>
+                            <div class="item-inner" id="languageListName">
+                                <div class="item-title">语言</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>                           
+                  <li >
+                    <a href="#" class=" item-content">
+                            <div class="item-content">
+                                <div class="item-media"><i class="iconfont icon-f7_modul"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">夜间模式</div>
+                                    <div class="item-content">
+                                        <label class="toggle toggle-init  color-green" id="transformBg">
+                                          <input type="checkbox" >
+                                          <span class="toggle-icon"></span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                    </a>
+                  </li>
+                    <li>
+                        <a href="#" class="item-link item-content" onclick="onAppCacheClear()">
+                            <div class="item-content">
+                                <div class="item-media"><i class="iconfont icon-f7_clear"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">清空缓存</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" class="item-link item-content" onclick="onAbout()">
+                            <div class="item-content">
+                                <div class="item-media"><i class="iconfont icon-f7_about"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">关于</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+          </div>
+
+          <button class="col button button-fill color-pink exitLogin" onclick="onUserLogout()">退出登陆</button>
+        </div>
+    </div>

@@ -1,0 +1,163 @@
+﻿* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	    font-family: unset;
+}
+
+html,
+body {
+	user-select: none;
+	-webkit-user-select: none;
+	overflow: hidden;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input,
+select {
+	vertical-align: middle;
+}
+@media screen and (max-width: 320px) {
+	.setPageContainer .exitLogin{    top: 2%!important;}
+}
+
+@media screen and (min-width: 320px) {
+	html,
+	body {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 375px) {
+	html,
+	body {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 414px) {
+	html,
+	body {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+	body {
+		height: 812px !important;
+		padding-top: constant(safe-area-inset-top);
+		padding-left: constant(safe-area-inset-left);
+		padding-right: constant(safe-area-inset-right);
+		padding-bottom: constant(safe-area-inset-bottom);
+	}
+	.tabbar-labels {
+		height: 70px !important;
+	}
+	.tabbar-labels .toolbar-inner {
+		padding-bottom: 20px;
+	}
+	.page>div.page-content {
+		padding-bottom: 70px !important;
+	}
+	.panel>.list-page>ul {
+		padding-top: 60px;
+	}
+	.toolbar-inner {
+		height: 100%!important;
+	}
+}
+
+.displayNone {display: none!important; }
+
+.view-menu-toolbar{position: relative;}
+
+.md .view-menu-toolbar {
+	height: 50px;
+	top: 100%;
+	transform: translateY(-100%);
+}
+
+.md .page-content {
+	padding-top: 44px!important;
+}
+
+.md .ptr-preloader {
+	top: 0!important;
+}
+
+.md .list .item-media {
+	min-width: 0!important;
+}
+
+html.with-statusbar.device-ios .framework7-root,
+html.with-statusbar.ios:not(.device-ios):not(.device-android) .framework7-root {
+	padding-top: 20px;
+}
+
+html.with-statusbar.device-android .framework7-root,
+html.with-statusbar.md:not(.device-ios):not(.device-android) .framework7-root {
+	padding-top: 24px !important;
+}
+
+html.device-android .statusbar,
+html.md:not(.device-ios):not(.device-android) .statusbar {
+	height: 24px;
+	display: block !important;
+}
+
+html.device-ios .statusbar,
+html.ios:not(.device-ios):not(.device-android) .statusbar {
+	height: 20px;
+}
+
+html.with-statusbar.device-android .panel,
+html.with-statusbar.md:not(.device-android) .panel {
+	top: 0px;
+	height: 100%;
+}
+
+html.with-statusbar.device-ios .popup,
+html.with-statusbar.ios:not(.device-ios):not(.device-android) .popup {
+	top: 0px !important;
+	height: 100% !important;
+}
+
+html.with-statusbar.device-android .popup,
+html.with-statusbar.md:not(.device-ios):not(.device-android) .popup {
+	top: 0px !important;
+	height: 100% !important;
+}

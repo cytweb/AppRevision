@@ -1,0 +1,69 @@
+﻿<div class="page " data-page="scheduleModifyChild" id="scheduleModifyChild">
+    <div class="navbar">
+        <div class="navbar-inner">
+           <div class="left">
+                <a href="#" class="back link">
+                    <i class="iconfont icon-back"></i>
+                </a>
+            </div>
+            <div class="center sliding title scheduleModifyChild">
+                 内容修改
+            </div>
+            <div class="right">
+                <a class="link icon-only panel-open" href="/setPage/">
+                    <i class="iconfont icon-f7_right_user">
+                    </i>
+                </a>
+            </div>                    
+        </div>
+    </div>
+    <div class="page-content scheduleModifyPageContent">
+        <!-- 场景控制项目 -->
+        <div class="scheduleModifyContainer equipLinkage_edit_modify_child list" >
+           <ul>
+              <li class="row equipLinkage_edit_modify_childFirst bottomBorderLine">
+                    <div class="col-50 selectedIcorlor" div_attribute="equipLinkage_edit_modify_childSecond">
+                      <i class="iconfont icon-selectUD"></i> 控制设备
+                    </div>
+                    <div class="col-50" div_attribute="equipLinkage_edit_modify_childThree">
+                      <i class="iconfont icon-selectUD"></i> 设置延迟
+                    </div>
+              </li>
+              <li class="equipLinkage_edit_modify_childSecond">
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">选择控制设备</div>
+                    <div class="item-input-wrap">
+                    <select name="gender" class="equipLinkage_edit_modify_child_equip">
+                     <!--  <option value="0" selected>每天</option>
+                      <option value="2">星期一</option>
+                      <option value="3">星期二</option>
+                      <option value="4">星期三</option>
+                      <option value="5">星期四</option>
+                      <option value="6">星期五</option>
+                      <option value="7">星期六</option>
+                      <option value="1">星期日</option> -->
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </li>
+              <li class="equipLinkage_edit_modify_childThree displayNone">
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">时长(ms):</div>
+                    <div class="item-input-wrap">
+                      <input type="number" placeholder="输入毫秒数"   class="equipLinkage_edit_modify_child_time" />
+                    </div>
+                  </div>
+                </div>
+              </li>
+           </ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">取消</button>
+          <button class="comfirmModify" onclick="comfirmScaneControl()">确认</button>
+        </div> 
+
+
+    </div>
+</div>
+

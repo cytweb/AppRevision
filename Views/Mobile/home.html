@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html class="with-statusbar">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<title>AlarmCenter | 首页</title>
+		<link rel="icon" href="/Image/logo.png" type="image/x-icon">
+		<!--框架样式-->
+		<link rel="stylesheet" href="/Scripts/plug/1.5.0/framework7.min.css">
+		<!--图标字体样式-->
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_823316_j1cn1yh60o8.css" />
+		<!--声波动画-->
+		<link rel="stylesheet" type="text/css" href="/Styles/Plugin/waveAnimation.css" />
+		<!--本页样式-->
+		<link rel="stylesheet" href="/Styles/Mobile/style.css"/>
+		<link rel="stylesheet" href="/Styles/Mobile/back/framework.css" class="whiteColor"/>
+		<link rel="stylesheet" href="/Styles/Mobile/setPage.css" />
+        <link rel="stylesheet" href="/Styles/Mobile/home.css" />
+        <link rel="stylesheet" href="/Styles/Mobile/welcomeWords.css" />  
+        <link rel="stylesheet" href="/Styles/Mobile/ppt.css" />     
+        <link rel="stylesheet" href="/Styles/Mobile/schedule.css" />          
+		<link rel="stylesheet" href="/Styles/Mobile/animate.min.css" />
+		<link rel="stylesheet" href="/Styles/Mobile/layout.css" />	
+		<link rel="stylesheet" href="/Styles/Mobile/equips.css" />
+		<link rel="stylesheet" type="text/css" href="/Styles/Mobile/eventSearch.css"/>
+		<link rel="stylesheet" type="text/css" href="/Styles/Mobile/voice.css" />
+		<link rel="stylesheet" type="text/css" href="/Styles/Mobile/btnStyle.css" />
+	</head>
+	<body>
+		<div id="app" style="visibility: hidden;">
+			<div class="statusbar"></div>
+			<div class="view view-main">
+				<div data-page="home" class="page" id="home">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="left sliding auth_name_get"></div>
+							<div class="right">
+								<a href="" class="link" id="sceneBtnControl" onclick="AllScene()">
+									<i class="iconfont icon-sceneNew"></i>
+                                     <p>场景切换</p>
+								</a>
+								<a href="#" onclick="RichScan()" id="scan"> 
+									<i class="iconfont icon-scanIcon"></i> 
+									<p>扫一扫</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="page-content mainDiv">
+						<!-- 实时快照 -->
+					    <div id="homeContents">
+							<ul class="charts-block"></ul>
+					    </div>
+					</div>
+				</div>
+				<div class="toolbar view-menu-toolbar tabbar tabbar-labels displayNone">
+					<div class="toolbar-inner row no-gap">
+						<a href="/home/" class="link active animation-no col-20" id="homeTool">
+							<i class="iconfont icon-homeNew"></i>
+						</a>
+						<a href="/snapshot/" class="link animation-no col-20" id="snapshotTool">
+							<i class="iconfont icon-snapShotNew"></i>
+						</a>
+						<a href="#" class="link col-20 popup-open" data-popup=".popup-voices" id="voiceBtn" >
+	                         <i class="iconfont icon-voiceNew"></i>
+						</a>
+<!-- 						<a href="/equips/" class="link animation-no col-20" id="equipsTool">
+							<i class="iconfont icon-equipNew"></i>
+configTool
+						</a> -->
+						<a href="#" class="link animation-no col-20" id="configTool">
+							<i class="iconfont icon-equipNew"></i>
+						</a>
+						<a href="#" class="link  col-20"  id="setPageTool">
+							<i class="iconfont icon-setNew"></i>
+
+						</a>
+					</div>
+				</div>
+			   <div class="popover popover-links popoverLink" style="width: 140px!important;text-align: center;">
+					<div class="popover-inner">
+						<div class="list">
+							<ul>
+								<li> 
+									<a class="list-button item-link popover-close" href="/eventSearch/" id="eventSearchTool"><span style="font-size: 13px;white-space: nowrap;">事件查询</span></a>
+								</li>
+								<li>
+									<a class="list-button item-link popover-close" href="/equipConfigList/" id="equipConfigListTool"><span style="font-size: 13px;white-space: nowrap;">系统配置</span></a>
+								</li>
+								<li>
+									<a class="list-button item-link popover-close" href="/schedule/" id="scheduleTool"><span style="font-size: 13px;white-space: nowrap;">报警排表</span></a>
+								</li> 
+								<li>
+									<a class="list-button item-link popover-close" href="/equipLinkage/" id="equipLinkageTool"><span style="font-size: 13px;white-space: nowrap;">设备联动</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup popup-voices">
+					<div class="voice-header">
+						<div class="voice-header-back popup-close" onclick="voiceCloseFun()"><i class="iconfont icon-back"></i></div>
+						<span>语音控制</span>
+					</div>
+					<div class="voice-container">
+						<div class="pannel-chat-info">
+							<div class="chart-content chart-content-old">
+								<span>请告诉我，您想要进行的操作</span>
+							</div>
+						</div>
+					</div>
+					<div class="voice-arrow-dialog">
+						按下说话
+					</div>
+					<div class="video-content-btn video-content-btn-Curtain" id="videoContentBtnId" style="background-color: transparent;">
+						<div class="homeHuanAnimation"><img src="/Image/video.png" style="height: 50%;" /></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- 框架js -->
+		<script src="/Scripts/plug/jquery-3.3.1.min.js"></script>
+		<script src="/Scripts/mobile/gw.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/Scripts/plug/jq.ajax.js"></script>
+		<script src="/Scripts/plug/highcharts.js"></script>
+		<script type="text/javascript" src="/Scripts/plug/1.5.0/framework7.js"></script>
+		<script type="text/javascript" src="/Scripts/plug/jquery.signalR-2.1.2.min.js"></script>
+		<!-- 配置js -->
+		<script type="text/javascript" src="/Scripts/mobile/dataConfig.js"></script>
+		<!-- 移动端入口js-->
+		<script type="text/javascript" src="/Scripts/mobile/home.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/mobileAll.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/PageJs.js"></script>
+		<script type="text/javascript" src="/Scripts/mobile/pageJavascript/Voice.js"></script>
+
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=rfoFCQF6wWFKVgnW7M9dihXscceje5cs"></script>
+	</body>
+</html>

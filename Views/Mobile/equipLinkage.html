@@ -1,0 +1,55 @@
+﻿<div class="page" data-page="equipLinkage" id="equipLinkage">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left sliding auth_name_get">
+                设备联动
+            </div>
+            <div class="right">
+                <a href="" class="link panel-open"  id="sceneBtnControl" onclick="AllScene()">
+                    <i class="iconfont icon-sceneNew"></i>
+                     <p>场景切换</p>
+                </a>
+                <a href="#" onclick="RichScan()" id="scan"> 
+                    <i class="iconfont icon-scanIcon"></i> 
+                    <p>扫一扫</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="equipLinkageContainer">
+            <div class="subnavbarTabel row no-gap">
+                <a class="col-50 selectScheduleMenu" href="#equipLinkage_set">
+                    联动设置
+                </a>
+                <a class="col-50" href="#equipLinkage_edit">
+                    场景编辑
+                </a>
+            </div>
+            <div class="equipLinkageContent">
+                <section class="equipGroupPublic" id="equipLinkage_set">
+                    <ul class="publicTable">
+                    </ul>
+                </section>
+                <section class="displayNone list accordion-list" id="equipLinkage_edit">
+                    <ul>
+                    </ul>
+                </section>
+                <div class="scheduleRightBottomBtn transformReportingMenu">
+                    <a class="link" href="#" id="equipLinkage_set_nav" >
+                        <span>
+                             <button onclick='newlyBuildLinkage(" "," "," "," "," "," "," "," ",getMaxID(),2);'>新增联动</button>
+                         </span>
+                        <img src="/Image/phone/directionjt.png" alt="" onclick="transformReportingObstaciesMenu1()"/>
+                    </a>
+                    <a class="link displayNone" href="#" id="equipLinkage_edit_nav" >
+                         <span>
+                             <button onclick="scanelEdit(this,2);">新增场景</button>
+                         </span>
+                        <img src="/Image/phone/directionjt.png" alt="" onclick="transformReportingObstaciesMenu1()"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

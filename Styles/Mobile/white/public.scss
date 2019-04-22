@@ -1,0 +1,82 @@
+﻿/*
+mixin：sass宏mixin
+*/
+@import '_mixin.scss';
+
+//全局字体颜色
+$allFontColor: #666;
+
+// header头部属性
+$headerFontSize: 1.4rem;
+$headerBgc: #fff;
+$headerBoxShadow: #eee;
+
+// 全局背景色,字体颜色,内容背景颜色
+$situationBgc: #F2F3F5;
+$situationFontColor: #666;
+$situationContainerBgc: #fff;
+$situationBoxShadow: #eee;
+
+// 顶部标题
+$headTitleFontColor: #000;
+
+//工具栏背景色
+$toolbarBgc: #FFFFFF;
+$toolbarFontColor: #898686;
+$selectedColor: #FD971F;
+$toolbarBoxShadow: rgba(0,0,0,0.20);
+
+//语音属性
+$voiceAllBgc: rgba(0,0,0,0);
+$voiceBgc: rgba(246,246,246,0.9);
+$voiceFontColor: rgb(102, 102, 102);
+$voiceBoxShadow: #777;
+
+// aside侧边栏属性
+$asideBgc: #272727;
+$asideBorderColor: #414141;
+
+// 统一按钮属性
+$btnFontSize: 1rem;
+$btnBackground: #2d8cf0;
+$btnFontColor: #DEF0F9;
+
+//统计栏属性
+
+$statsBgc: #fff;
+$statsFontColor: #333;
+$statsBorderColor: #f0f4f7;
+$selectedColor: #FD971F;
+
+
+//未点击按钮颜色
+$unclickedColor: #648EFF;
+$unclickedColor_a: #f6f6f6;
+$bzColor: #0ed1e6;
+$unclickBorderRadius: 6px;
+// 统一table样式
+$tableHeaderFontSize: 1rem;
+$tableHeaderFontColor: #666;
+$tableTitle: antiquewhite;
+$tableHeaderBgc: #ffffff;
+
+$tableTbodyFontSize: 0.8rem;
+$tableTbodyFontColor: #999;
+$tableTbodySingleLineColor: #fff;
+$tableBorderBottom: #e7e7e7;
+
+//input样式
+$inputBorderColor: #eee; 
+
+// tab切换属性
+$tabBackground: #cea16c;
+$tabFontColor: white;
+
+// popup弹框
+$popupBackground: rgba(255,255,255,0.5);
+
+
+// 首页按钮
+$homebtnColor: #333;
+$homebtnBg: #cfd7dc;
+

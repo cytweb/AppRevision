@@ -1,0 +1,29 @@
+﻿/*
+mixin：sass宏mixin
+*/
+@import  'public.scss';
+
+
+// 设置界面
+.setPageContainer{
+    overflow-y: auto;
+    a{  
+        color: #{$asideBorderColor};width: 100%;display: block;
+        &.item-content,&>div.item-content{width: 100%;height: 44px;padding-left: 0!important;}
+        i{font-size: 1.8rem;}
+    }
+    &>div.userClassName{
+        text-align: center;
+        i{font-size: 7rem;}
+        p{font-size: 1.2rem;margin: 0;    padding-bottom: 20px;text-align: center;}
+    }
+    &>div.simple-list{margin: 0;}
+    #voiceList{width: 100%;}
+    .simple-list li{.item-inner{padding-bottom: 0;padding-top: 0;}}
+    .simple-list li:after{height: 0px;} 
+    .exitLogin {font-size: #{$btnFontSize}; width: 90%; height: 50px;  left: 5%; top: 10%; }   
+    .toast {text-align: center;}
+}
+
+
+

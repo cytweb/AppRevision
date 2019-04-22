@@ -1,0 +1,667 @@
+/*欢迎词*/
+
+@charset "utf-8";
+@import 'public.scss';
+
+.saveWelcomeWords {
+    font-family: PingFang SC Medium;
+    font-size: 1rem;
+    color: #3E7CFB;
+}
+.md .saveWelcomeWords {
+    margin-right: 10px;
+}
+
+.welcomePageContents {
+    background: #FFFFFF;
+}
+
+.welcomeWordContents {
+    width: 100%;
+    height: 100%;
+    // background: #FFFFFF;
+    padding: 0px 5%;
+    position: relative;
+}
+
+.welcome-Word-boxs {
+    width: 100%;
+    height: 35%;
+    padding: 1.5rem 0rem;
+}
+
+.welcome-Word-boxs .publicInputEdit {
+    font-size: 1rem;
+    color: yellow;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    background: #FFFFFF;
+    resize: none;
+    /*border: 1px solid #EAEAEA;*/
+    padding: 5px 0;
+}
+
+.welcome-Word-control-boxs {
+    width: 100%;
+    height: 44px;
+    border: 1px solid #EAEAEA;
+    list-style: none;
+    position: absolute;
+    bottom: 43%;
+    left: 0;
+}
+
+.welcome-Word-control-boxs li {
+    text-decoration: none;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    float: left;
+}
+
+.welcome-Word-control-boxs li i {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: 2rem;
+    // color: #333333;
+}
+
+.welcome-Word-control-tabs {
+    width: 100%;
+    height: 43%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.welcome-Word-control-tab {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.welcome-Word-control-tab dl {
+    width: 100%;
+    height: 20%;
+    border-top: 1px solid rgba(51, 51, 51, .1);
+}
+
+.welcome-Word-control-tab dl:first-child {
+    border-top: 0px solid rgba(51, 51, 51, .1);
+}
+
+.welcome-Word-control-tab dt {
+    width: 20%;
+    height: 100%;
+    float: left;
+    font-family: PingFang SC Regular;
+    font-size: 1rem;
+    // color: #333333;
+    letter-spacing: 1px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-Word-control-tab dd {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+.welcome-Word-control-tab-align {
+    width: 25%;
+    height: 100%;
+    font-size: 1.6rem !important;
+    // color: #333333;
+    float: left;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.welcome-Word-control-tab-range-slider {
+    width: 75%;
+    height: 100% !important;
+    float: left;
+    display: inline-block;
+}
+
+.welcome-Word-active-Color {
+    display: inline-block;
+    width: 2rem;
+    height: 1.4rem;
+    border-radius: 0.2rem;
+    background: rgb(255, 255, 0);
+    position: relative;
+}
+
+.publicInput {
+    width: 60%;
+    height: 100%;
+    font-family: PingFang SC Medium;
+    display: inline-block!important;
+    font-size: 1rem!important;
+    color: #3E7CFB !important;
+    letter-spacing: 1px;
+    text-indent: 1rem;
+    outline: none!important;
+    background: transparent!important;
+    border: 0!important;
+    text-decoration: underline;
+    resize: none!important;
+}
+
+.Close_outberLighLineSelect {
+    background: url(/Image/scene/light/peri_close.png) no-repeat center center/100% 100%;
+}
+
+.Close_innerberLineSelect {
+    background: url(/Image/scene/light/peri_close_ipad.png) no-repeat center center/90% 90%;
+}
+
+.Close_centerberLineSelect {
+    background: url(/Image/scene/light/core_close_ipad.png) no-repeat center center/100% 100%;
+}
+
+.Open_outberLighLineSelect {
+    background: url(/Image/scene/light/peri_open.png) no-repeat center center/100% 100%;
+}
+
+.Open_innerberLineSelect {
+    background: url(/Image/scene/light/peri_open_ipad.png) no-repeat center center/90% 90%;
+}
+
+.Open_centerberLineSelect {
+    background: url(/Image/scene/light/core_open_ipad.png) no-repeat center center/100% 100%;
+}
+
+.welcomeHeader {
+    width: 300px;
+    height: 85px;
+    margin: 2% auto 0 auto;
+    background: #111926;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcomeContent {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.setStyle {
+    width: 100%;
+    text-align: center;
+    padding: 5% 0;
+    background: transparent;
+}
+
+.setStyle>div {
+    width: 100%;
+}
+
+.saveWords a {
+    color: #ccc;
+    font-size: 1rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    outline: none;
+    display: inline-block;
+    background: url(/image/phone/button1.png);
+    background-size: 100% 100%;
+    text-align: center;
+    box-shadow: 0px -1px 0px #282b2d;
+    border-radius: 2px;
+    font-weight: 100;
+}
+
+.saveWords a:active {
+    background: url(/image/phone/button1.png);
+    box-shadow: 0px 0px 0px #282b2d;
+}
+
+.wecomeButtom {
+    width: 100%;
+    height: 40%;
+}
+
+.weicomeClose {
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    background: #273341;
+    box-shadow: 1px 1px 5px #494a46;
+}
+
+.fontBackground,
+#SelectSkin {
+    color: #333;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333333;
+}
+
+.fontBackground {
+    padding: 8px 0px;
+}
+
+.fontBackground span {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #435647;
+}
+
+.selectDiv {
+    width: 60%;
+    height: 1rem;
+    position: relative;
+    display: inline-block;
+    border: 0;
+    text-indent: 1rem;
+    position: relative;
+    left: -5px;
+}
+
+.selectDiv input {
+    position: absolute;
+    top: -5px;
+    width: 30px;
+    height: 30px;
+}
+
+.navbar a.activeSkin {
+    color: rgb(255, 255, 255);
+}
+
+.wecomeButtom h3 {
+    font-weight: 500;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom: 1px solid #435647;
+}
+
+.wecomeButtom .swiper-container {
+    height: 100%;
+    padding: 5%;
+}
+
+ ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #888;
+}
+
+ :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #888;
+}
+
+ ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #888;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #888;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: #888;
+}
+
+.welcomeTop {
+    width: 100%;
+    height: 60%;
+    border-bottom: 1px solid #39414C
+}
+
+#querText {
+    color: #ddd;
+    font-size: 1rem;
+    width: 100%;
+    height: 60%;
+    border: none;
+    padding: 10px;
+    margin-top: 2%;
+    box-sizing: border-box;
+    resize: none;
+    background: #111926;
+}
+
+.welcomeHeader span {
+    position: absolute;
+    white-space: pre;
+}
+
+.fontWeight {
+    font-weight: bold;
+}
+
+.fontStylext {
+    font-style: italic;
+}
+
+.setStyle select,
+.setStyle option {
+    font-size: 1rem;
+    color: #F1AC08;
+    border-radius: 2px;
+    background: transparent;
+    text-indent: 1rem;
+    position: relative;
+    left: -5px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+#SelectSkin {
+    z-index: 999;
+    position: absolute;
+    left: 2px;
+    bottom: 60px;
+}
+
+#SelectSkin .item-content a {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    border-radius: 6px;
+    outline: none;
+    background: white;
+}
+
+#colorSkin {
+    width: 200px;
+    border: 1px solid #58B9B5;
+    background: #F2F3F5;
+    z-index: 9999;
+    padding: 10px
+}
+
+#colorSkin a {
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    display: inline-block;
+}
+
+#colorSkin a i {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#colorSkin a:nth-child(1) i {
+    background-color: red;
+}
+
+#colorSkin a:nth-child(2) i {
+    background-color: yellow;
+}
+
+#colorSkin a:nth-child(3) i {
+    background-color: black;
+}
+
+#colorSkin a:nth-child(4) i {
+    background-color: blue;
+}
+
+#colorSkin a:nth-child(5) i {
+    background-color: #ccc;
+}
+
+#colorSkin a:nth-child(6) i {
+    background-color: #2b81d6;
+}
+
+#colorSkin a:nth-child(7) i {
+    background-color: green;
+}
+
+#colorSkin a:nth-child(8) i {
+    background-color: white;
+}
+
+#colorSkin a:nth-child(9) i {
+    background-color: #5EFF00;
+}
+
+.textStyle_selected {
+    color: #F1AC08 !important;
+}
+
+.textStyle_selected1 {
+    color: #F1AC08;
+}
+
+.wecomeButtom {
+    width: 100%;
+    height: 100%;
+}
+
+.wecomeButtom h3 {
+    font-size: 1.2rem;
+    color: #f7f7f7;
+    font-weight: 500;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.wecomeButtom h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    width: 100%;
+    height: 1px;
+    background-color: #49AEAB;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    transform: scaleY(0.2);
+}
+
+
+/*底部边框0.5px*/
+
+.wecomeButtom .swiper-slide {
+    width: calc(100% / 3);
+    height: 100%;
+    // background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 0 5px;
+    border: 0px solid #517B80;
+}
+
+.wecomeButtom .swiper-slide span {
+    text-align: center;
+    display: block;
+    margin: 20px;
+    font-size: 21px;
+    position: relative;
+}
+
+.wecomeButtom .swiper-slide .welcome-Word-control-icon-check {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+    color: #F2F3F5;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    display: none;
+}
+
+.welcome-Word-control-icon-mutual {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.welcome-Word-control-icon-mutual:nth-child(2) {
+    left: auto;
+    right: 15%;
+}
+
+.welcome-Word-control-icon-mutual i {
+    width: 100px;
+    height: 100px;
+    font-size: 5rem;
+    color: #333333;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.control-active-color {
+    color: #3E7CFB !important;
+}
+
+.control-active-style-normal {
+    font-weight: normal !important;
+}
+
+.control-active-style-bold {
+    font-weight: bold !important;
+}
+
+.control-active-style-italic {
+    font-style: italic !important;
+}
+
+.welcome-Word-control-icon-mutual:nth-child(2) i {
+    color: #FF4747;
+}
+
+.welcome-Word-control-icon-mutual span {
+    height: 95px;
+    font-size: 0.875rem;
+    font-family: PingFang SC Medium;
+    color: #FFFFFF;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.welcome-Word-control-icon-mutual:nth-child(2) span {
+    color: #FF4747;
+}
+
+.wecomeButtom img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.displayNoneN {
+    display: none;
+}
+
+.selectBorder {
+    border: 2px solid #F1AC08 !important;
+    transition: all 0.3s;
+}
+
+.editWelcome {
+    color: #f7f7f7;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+    display: inline-block;
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.editWelcome:active {
+    color: #ffb400;
+    border: 1px solid #ffb400;
+}
+
+.fontStyle {
+    font-size: 2rem;
+    color: #eee;
+}
+
+.setStyleFont>div {
+    margin-bottom: 15px;
+    white-space: nowrap;
+}
+
+.activeColor {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: rgb(255, 255, 0);
+    top: 7px;
+    position: relative;
+}
+
+
+/*返回*/
+
+.ios div#welcomeWords .icon-back,
+.md div#welcomeWords .icon-back {
+    background-image: url()!important;
+}
+
+.ios div#welcomeWords .icon-back,
+.ios div#welcomeWords .icon-prev,
+.md div#welcomeWords .icon-back {
+    width: auto;
+    height: auto;
+}
+
+.ios div#welcomeWords .list,
+.md div#welcomeWords .list {
+    margin: 0;
+}
+
+.ios div#welcomeWords .welcomePageContents .list .item-inner:after,
+.md div#welcomeWords .welcomePageContents .list .item-inner:after,
+div#welcomeWords .welcomePageContents .list ul:after,
+div#welcomeWords .welcomePageContents .list ul:before {
+    height: 0!important;
+    
+}
+
+.selectMenuWelcomewords{color: #3E7CFB;}

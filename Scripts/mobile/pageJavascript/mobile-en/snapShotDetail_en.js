@@ -1,0 +1,193 @@
+var userAdmin = [],chatList,snapshotDetailArrs = [];
+function snapShotDetail_en() {
+    switchToolbar("snapshotTool");
+    //获取父页面参数
+    var chatObject = myApp.views.main.history,
+        urlLength = chatObject.length - 1;
+    var chatValue = chatObject[urlLength].split("?")[1].split("&");
+    var chatTitleName = chatValue[0];
+    chatList = chatValue[1];
+    $("#snapShotDetailTitleId").html(chatTitleName)
+    var snapashot_ptr = $$('.snapashotMessage-page-content');
+    snapashot_ptr.on("ptr:refresh", refreshpg);
+    loadMessage();
+    var searchbar = myApp.searchbar.create({
+        el: '.searchbarSnapDetail',
+        searchContainer: '.snapshotMessage-ul',
+        searchIn: '.item-title,.item-subtitle',
+    });
+}
+
+function loadMessage() {
+    $.ajax({
+        type: 'post',
+        url: '/api/GWServiceWebAPI/get_AdministratorData',
+        headers: {
+            Authorization: window.localStorage.ac_appkey + '-' + window.localStorage.ac_infokey
+        },
+        data: {
+            "getDataTable": 0,
+        },
+        success: function(dt) {
+            if (dt.HttpStatus == 200 && dt.HttpData.data) {
+                var resultData = dt.HttpData.data;
+                userAdmin = [];
+                for (var i = 0; i < resultData.length; i++) {
+                    userAdmin.push({
+                        Administrator: resultData[i].Administrator,
+                        MobileTel: resultData[i].MobileTel,
+                        allInfo: resultData[i].Administrator + "&&" + resultData[i].MobileTel
+                    });
+                }
+            }
+        }
+    });
+    $.ajax({
+        type: 'post',
+        url: '/api/event/real_evt',
+        headers: {
+            Authorization: window.localStorage.ac_appkey + '-' + window.localStorage.ac_infokey
+        },
+        data: {
+            levels: chatList
+        },
+        success: function(dt) {
+            if (dt.HttpStatus == 200 && dt.HttpData.data) {
+                var result = dt.HttpData.data;
+                let tableListData = [];
+                var strSureData = "",
+                    strData = "",
+                    countNum = 0;
+                if (result.length > 0) {
+                    for (var i = 0; i < result.length; i++) {
+                        snapshotDetailArrs.push(result[i]);
+                        var textareaEventMsg = "";
+                        if (result[i].EventMsg.length > 200) {
+                            textareaEventMsg = "<textarea>" + result[i].EventMsg + "</textarea>";
+                        } else {
+                            textareaEventMsg = result[i].EventMsg;
+                        }
+                        var textareaAdviceMsg = "";
+                        if (result[i].Proc_advice_Msg && result[i].Proc_advice_Msg.length > 200) {
+                            textareaAdviceMsg = "<textarea>" + result[i].Proc_advice_Msg + "</textarea>";
+                        } else {
+                            textareaAdviceMsg = result[i].Proc_advice_Msg;
+                        }
+                        var isSureSpan = "";
+                        if (result[i].bConfirmed == false) {
+                            isSureSpan = "<span class='span-color-notsure sure-flag'>Unconfirmed</span>";
+                            strData += '<li class="accordion-item">' + '<a href="#" class="item-link item-content">' + '	<div class="item-inner">' + '		<div class="item-title-row">' + '			<div class="item-subtitle">' + formatDate(result[i].Time) + '</div>' + '			<div class="item-after">' + isSureSpan + '</div>' + '		</div>' + '		<div class="item-text item-title fontweight-normal">' + result[i].EventMsg + '</div>' + '	</div>' + '</a>' + '<div class="accordion-item-content content-container">' + '<div class="content-container-block">' + '<p>Time:' + formatDate(result[i].Time) + '</p>' + '<p>Event:' + textareaEventMsg + '</p>' + '<p>Processing Opinions:<textarea class="advice-textarea" placeholder="Please enter your comments."></textarea></p>' + '<p>Whether to send short messages:&nbsp;&nbsp;<label class="toggle toggle-init color-blue" onclick="onProcsCheckBox(' + countNum + ')">' + '<input type="checkbox" class="isProcsInput"><span class="toggle-icon"></span></label><div class="procsContent list-block" style="max-height:300px;overflow-y: auto;display:block"></div></p>' + "<p><a href='#' class=\"button button-big button-fill color-blue\" onclick='OnSureMessage(\"" + countNum + "\",\"" + result[i].Time + "\")' values='" + result[i] + "' title=\"" + result[i].User_Confirmed + formatDate(result[i].Dt_Confirmed) + "\">Confirm</a></p>" + '</div></div>' + '</li>';
+                            countNum++;
+                        } else {
+                            isSureSpan = "<span class='span-color-sure sure-flag'>Confirmed</span>";
+                            strSureData += '<li class="accordion-item">' + '<a href="#" class="item-link item-content">' + '	<div class="item-inner">' + '		<div class="item-title-row">' + '			<div class="item-subtitle">' + formatDate(result[i].Time) + '</div>' + '			<div class="item-after">' + isSureSpan + '</div>' + '		</div>' + '		<div class="item-text item-title fontweight-normal">' + result[i].EventMsg + '</div>' + '	</div>' + '</a>' + '<div class="accordion-item-content content-container">' + '<div class="content-container-block">' + '<p>Time：' + formatDate(result[i].Time) + '</p>' + '<p>Event：' + textareaEventMsg + '</p>' + '<p>Handling opinions：' + textareaAdviceMsg + '</p>' + "<p>Confirming person：" + result[i].User_Confirmed + '</p><p>Confirmation time:' + formatDate(result[i].Dt_Confirmed) + "</p>" + '</div></div>' + '</li>';
+                        }
+                    }
+                    $("#snapShotDetailListId").html(strData + strSureData);
+                    $("#snapShotDetailListId").css({
+                        "margin-bottom": "100px"
+                    })
+                } else {
+                    $("#snapShotDetailListId").html(strData + strSureData);
+                    $("#snapShotDetailListId").css({
+                        "margin-bottom": "0px"
+                    })
+                }
+            }
+        }
+    });
+}
+//选择是否发送短信
+function onProcsCheckBox(countNum) { //console.log(countNum)
+    if (!$("#snapShotDetailListId li").eq(countNum).find('.isProcsInput').is(':checked')) {
+        if (!$("#snapShotDetailListId li").eq(countNum).find(".procsContent ul").find("li").length) {
+            var newRow = "<ul>";
+            for (var i = 0; i < userAdmin.length; i++) {
+                newRow += '<li><label class="item-checkbox item-content">' + '    <input type="checkbox" name="my-checkbox"  value="' + userAdmin[i].MobileTel + '"/>' + '    <i class="icon icon-checkbox"></i>' + '    <div class="item-inner">' + '      <div class="item-title">' + userAdmin[i].Administrator + (userAdmin[i].MobileTel == null ? "" : "(" + userAdmin[i].MobileTel + ")") + '</div>' + '    </div>' + '  </label></li>';
+            }
+            newRow += "</ul>";
+            $("#snapShotDetailListId li").eq(countNum).find(".procsContent").html(newRow);
+            $("#snapShotDetailListId li").eq(countNum).find(".procsContent").show();
+        }
+    } else {
+        $("#snapShotDetailListId li").eq(countNum).find(".procsContent").html("");
+    }
+}
+
+function OnSureMessage(countNum, strTime) {
+    /*阻止事件冒泡*/
+    event.stopPropagation();
+    var checkValArr = []; //短信联系人选中值
+    var strAdviceMsg = $("#snapShotDetailListId li").eq(countNum).find('.advice-textarea').val(); //处理意见值
+    var isShortMsg = "";
+    if (!$("#snapShotDetailListId li").eq(countNum).find('.isProcsInput').is(':checked')) {
+        $("#snapShotDetailListId li").eq(countNum).find('input[name="my-checkbox"]:checked').each(function() {
+            checkValArr.push($(this).val());
+        });
+        isShortMsg = true;
+    }
+    var strEventMsg = snapshotDetailArrs[countNum].EventMsg;
+    var Time = strTime.replace("T", " ");
+    var TimeArr = [];
+    var strTimeArr = "";
+    if (Time != "" && Time != null) {
+        TimeArr = Time.split(".");
+        strTimeArr = TimeArr[1].toString();
+        if (strTimeArr.length >= 6) {
+            strTimeArr = strTimeArr.substring(0, 6)
+        } else {
+            strTimeArr = strTimeArr + "000000".substring(0, 6 - strTimeArr.length)
+        }
+    }
+    $.ajax({
+        type: 'post',
+        url: '/api/event/confirm_evt',
+        headers: {
+            Authorization: window.localStorage.ac_appkey + '-' + window.localStorage.ac_infokey
+        },
+        data: {
+            msg: strAdviceMsg, //处理意见
+            shortmsg: isShortMsg, //是否发送短信
+            telUser: checkValArr.toString(), //发送人的电话
+            evtname: strEventMsg, //事件名
+            time: TimeArr[0] + "." + strTimeArr, //事件时间
+            userName: window.localStorage.userName //是否发送短信
+        },
+        success: function(dt) {
+            if (dt.HttpStatus == 200 && dt.HttpData.data) {
+                var resultData = dt.HttpData.data;
+                myApp.toast.create({
+                    text: 'Successful operation!',
+                    position: 'center',
+                    closeTimeout: 500,
+                }).open();
+                $("#snapShotDetailListId li").eq(countNum).find(".content-container").css({
+                    height: "0"
+                });
+                $("#snapShotDetailListId li").eq(countNum).find('.sure-flag').html("Confirmed");
+                $("#snapShotDetailListId li").eq(countNum).find('.sure-flag').removeClass("span-color-notsure").addClass("span-color-sure");
+                $("#snapShotDetailListId li").eq(countNum).removeClass("accordion-item-opened");
+                setTimeout(loadMessage, 2000)
+            }
+        }
+    });
+}
+
+function formatDate(time) {
+    var newTime = time.replace("T", " ")
+    return newTime.substring(0, 19);
+}
+
+function refreshpg(e) {
+    //console.log(e)
+    setTimeout(function() {
+        loadMessage();
+        // 加载完毕需要重置
+        e.detail();
+        myApp.toast.create({
+            text: 'Successful data loading!',
+            position: 'center',
+            closeTimeout: 500,
+        }).open();
+    }, 2000);
+}

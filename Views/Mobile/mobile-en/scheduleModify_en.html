@@ -1,0 +1,236 @@
+﻿<div class="page " data-page="scheduleModify_en" id="scheduleModify_en">
+    <div class="navbar">
+        <div class="navbar-inner">
+           <div class="left">
+                <a href="#" class="back link">
+                    <i class="iconfont icon-back"></i>
+                </a>
+            </div>
+            <div class="center sliding title scheduleModify">
+                 Content modification
+            </div>
+            <div class="right">
+                <a class="link icon-only panel-open" href="/setPage/">
+                    <i class="iconfont icon-f7_right_user">
+                    </i>
+                </a>
+            </div>                    
+        </div>
+    </div>
+    <div class="page-content scheduleModifyPageContent">
+
+        <div class="scheduleModifyContainer scheduleModifyContainer_user list displayNone">
+          <ul>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Personnel name</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="name" placeholder="Your name" class="schedule1_username">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Telephone number</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="email" placeholder="Your telephone number" class="schedule1_hpone">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">SMS number</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="email" placeholder="Your SMS Number" class="schedule1_msm">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Mail box</div>
+                  <div class="item-input-wrap">
+                    <input type="email" name="email" placeholder="E-Mail address" class="schedule1_email">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Alarm level</div>
+                  <div class="item-input-wrap">
+                    <input type="number" name="email" placeholder="Alarm level" class="schedule1_level">
+                  </div>
+                </div>
+              </div>
+            </li>                        
+          </ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">Cancel</button>
+          <button class="comfirmModify" onclick="updateUserModify_en(this)">Save</button>
+        </div>  
+       <!-- 分组 -->
+        <div class="scheduleModifyContainer scheduleModifyContainer_equipgroup list displayNone" >
+           <div></div>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">Cancel</button>
+          <button class="comfirmModify" onclick="updateEquip_en(this)">Save</button>
+        </div>  
+
+       <!-- 管理范围 -->
+        <div class="scheduleModifyContainer scheduleModifyContainer_administartor list displayNone" >
+           <ul>
+               <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Personnel name</div>
+                   <div class="item-input-wrap">
+                    <select name="gender" class="scheduleModifyContainer_administartor_user">
+   
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Group name</div>
+                    <div class="item-input-wrap">
+                    <select name="gender" class="scheduleModifyContainer_administartor_group">
+   
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </li>
+           </ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">Cancel</button>
+          <button class="comfirmModify" onclick="updateAlmReport_en(this)">Save</button>
+        </div>  
+
+         <!-- 周排表 -->
+        <div class="scheduleModifyContainer scheduleModifyContainer_specificDate list displayNone">
+           <ul>
+               <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Personnel name</div>
+                    <div class="item-input-wrap">
+                    <select name="gender" class="scheduleModifyContainer_specificDate_username">
+
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">week</div>
+                    <div class="item-input-wrap">
+                    <select name="gender" class="scheduleModifyContainer_specificDate_wk">
+                      <option value="0" selected>Daily</option>
+                      <option value="2">Monday</option>
+                      <option value="3">Tuesday</option>
+                      <option value="4">Wednesday</option>
+                      <option value="5">Thursday</option>
+                      <option value="6">Friday</option>
+                      <option value="7">Saturday</option>
+                      <option value="1">Sunday</option>
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </li>
+               <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Start time</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="stime" placeholder="00:00" value="00:00" class="scheduleModifyContainer_specificDate_stime">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">End time</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="etime" placeholder="00:00"  value="00:00" class="scheduleModifyContainer_specificDate_etime">
+                    </div>
+                  </div>
+                </div>
+              </li>                           
+           </ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">Cancel</button>
+          <button class="comfirmModify" onclick="updateWeekAlmReport_en(this)">Save</button>
+        </div>  
+
+        <!-- 特定排表 -->
+        <div class="scheduleModifyContainer scheduleModifyContainer_weeklytable list displayNone" >
+           <ul>
+               <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Personnel name</div>
+                    <div class="item-input-wrap">
+                    <select name="gender" class="scheduleModifyContainer_weeklytable_username">
+
+                    </select>
+                  </div>
+                  </div>
+                </div>
+              </li>
+               <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Start date</div>
+                    <div class="item-input-wrap">
+                      <input type="text" name="name" placeholder="Start date" class="scheduleModifyContainer_weeklytable_stime" id="Spe_stime">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">End date</div>
+                    <div class="item-input-wrap">
+                      <input type="email" name="email" placeholder="End date" class="scheduleModifyContainer_weeklytable_etime" id="Spe_etime">
+                    </div>
+                  </div>
+                </div>
+              </li>                           
+           </ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">Cancel</button>
+          <button class="comfirmModify" onclick="updateSpeAlmReport_en(this)">Save</button>
+        </div>  
+
+
+        <!-- 场景编辑 -->
+        <div class="scheduleModifyContainer equipLinkage_edit_modify list displayNone" >
+           <div class="equipLinkage_edit_header">
+               <div class="row">
+                  <label class="col-50">Scene name</label>
+                  <input type="text" value="Enter the scenario name" class="col-50" id="equipLinkage_input"/>
+               </div>
+               <div class="row">
+                  <label class="col-50">Scene control</label>
+                   <span class="col-50"><a href="#" onclick="scenalControlPro_en(this)">Add to</a></span>
+               </div>               
+           </div>
+           <ul></ul>
+          <button class="comfirmModify comfirmCancel color-red" onclick="myApp.router.back();">Cancel</button>
+          <button class="comfirmModify" onclick="submitScene_en(this)">Save</button>
+        </div>  
+
+    </div>
+</div>
+

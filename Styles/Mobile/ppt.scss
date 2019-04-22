@@ -1,0 +1,261 @@
+/*PPT*/
+@charset "utf-8";
+@import 'public.scss';
+.pptActive a {
+    font-size: 0.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    display: inline-block;
+    padding-left: 2.5rem;
+    position: relative;
+}
+.pptActive a i {
+    font-size: 1.2rem;
+    display: inline-block;
+    position: absolute;
+    left: 1.2rem;
+    top: 0;
+    margin-top: -0.1rem;
+}
+.listTitle {
+    font-size: 1rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    position: relative;
+    padding: 0px 5px;
+    font-weight: 200;
+}
+.listTitle em {
+    font-size: 1.5rem;
+    color:#{$tabBackground};
+    display: inline-block;
+    position: absolute;
+    right: 4%;
+    top: 0;
+    margin-top: -0.1rem;
+}
+.listTitle span i {
+    margin: 0px 10px;
+}
+.selectUD i {
+    color:#{$tabBackground};
+}
+#Filelist {
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+#Filelist>ul {
+    position: absolute;
+    top: 2.5rem;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    overflow-y: scroll;
+}
+#Filelist ul li {
+    line-height: 3rem;
+    position: relative;
+}
+#Filelist li>ul {
+    padding-left: 10px;
+}
+#Filelist a {
+     // color: #{$situationFontColor};
+    font-size: 0.8rem;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-left: 2rem;
+    position: relative;
+}
+#Filelist a>i {
+    font-size: 1rem;
+    // color: #{$situationFontColor};
+    display: inline-block;
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    margin-top: -0.1rem;
+}
+#Filelist a>b {
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    right: 3%;
+    top: 0;
+    margin-top: -0.1rem;
+}
+.topBottom>i {
+    font-size: 1rem !important;
+    display: inline-block;
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    margin-top: -0.1rem;
+}
+.topBottom>b {
+    color: #bbae50;
+}
+.icon-file {
+    color: #bbae50;
+}
+.icon-word {
+    color: #ccc;
+}
+.pptActive {
+    // height: 20%;
+    // background: #{$situationContainerBgc};
+}
+.pptActive .item-divider, .pptSelect .item-divider {
+    background: #212934;
+}
+.pptActive .item-content, .pptSelect .item-content {
+    // background:#{$tableHeaderBgc};
+}
+.pptActive>a, .pptSelect>a {
+    width: 100%;
+    display: inline-block;
+}
+.pptActive .item-inner:after {
+    height: 0 !important;
+}
+.selectedBackground {
+    background: #35465A !important;
+}
+.item-divider {
+    height: 2rem;
+    line-height: 2rem;
+}
+.pptSelect>div {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+/*PPT详情*/
+
+.mettingDetailsContent h3 {
+    color: #{$popupBackTitle};
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 20px 0;
+}
+.mettingDetailsBottom div {
+    text-align: center;
+}
+.mettingDetailsContent .swiper-slide {
+    overflow-x: visible;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+.mettingDetails_index {
+    height: 20%;
+    transition: all 1s linear;
+}
+.mettingDetails_index img {
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+}
+.viewsPng img {
+    width: 100%;
+    height: 100%;
+}
+.selectBorder {
+    border: 1px solid #{$tabSelected}!important;
+    transition: all 0.3s;
+}
+.pptActive .item-title, .pptSelect .item-title {
+    color: #ddd;
+    font-size: 1rem !important;
+}
+.mettingDetailsContent {
+    width: 100%;
+    height: 100%;
+    // background: #{$popupBackground};
+}
+.mettingDetailsContent .swiper-custom {
+    width: 100%;
+    height: 100%;
+}
+.mettingDetailsContent .swiper-container {
+    height: 55%;
+    margin: 0 5%;
+}
+.viewsPng {
+    width: 100%;
+    height: 70%;
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 2%;
+}
+.mettingDetailsBottom {
+    height: 25%;
+}
+.mettingDetailsBottom div {
+    width: 100%;
+    height: 100%;
+    padding: 0 15%;
+    background: url(/Image/phone/indexPage.png) no-repeat center/auto 100%;
+    position: relative;
+}
+.mettingDetailsBottom div a {
+    width: 5rem;
+    height: 3rem;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    position: absolute;
+    background: transparent;
+}
+.startPage {
+    left: 15%;
+    top: 50%;
+}
+.prePage {
+    left: 50%;
+    top: 18%;
+}
+.nextPage {
+    left: 50%;
+    top: 82%;
+}
+.endPage {
+    left: 85%;
+    top: 50%;
+}
+/*ppt close*/
+
+.closeppt {
+    color: #{$btnWhiteFontColor} !important;
+    font-size: 1rem;
+    padding: 8px 30px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    text-align: center;
+    background: #{$btnCancelBackground};
+    display: inline-block;
+    z-index: 1;
+}
+.preloader {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+}
+.modalDiv {
+    position: absolute;
+    left: 0;
+    top: 44px;
+    right: 0;
+    bottom: 50px;
+    z-index: 9999;
+}
+.bottomBorderLine:after{content:"";width: 100%;height: 1px;display: inline-block; position: absolute;bottom: 0;left: 0;border-bottom: 1px solid #{$inputBorderColor};transform: scaleY(0.5);}

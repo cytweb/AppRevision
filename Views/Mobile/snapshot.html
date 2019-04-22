@@ -1,0 +1,30 @@
+﻿<div data-page="snapshot" class="page" id="snapshot">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="left sliding auth_name_get">
+				实时快照
+			</div>
+			<div class="right">
+				<a href="" class="link panel-open"  id="sceneBtnControl" onclick="AllScene()">
+					<i class="iconfont icon-sceneNew"></i>
+                     <p>场景切换</p>
+				</a>
+				<a href="#" onclick="RichScan()" id="scan"> 
+					<i class="iconfont icon-scanIcon"></i> 
+					<p>扫一扫</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content ptr-content snapashot-page-content" data-ptr-distance="55">
+ 		<div class="ptr-preloader">
+			<div class="preloader"></div>
+			<div class="ptr-arrow"></div>
+		</div> 
+		<div class="list-block list-page list snapshot-main" style="margin:0;">
+			<ul class="snapshot-ul" id="snapshotMenuListId">
+			</ul>
+		</div>
+	</div>
+</div>

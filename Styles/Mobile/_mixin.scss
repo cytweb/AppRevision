@@ -1,0 +1,64 @@
+@mixin shape ($width: 100%, $height: 100%) {
+    width: $width;
+    height: $height;
+}
+@mixin with ($width) {
+    width: $width;
+}
+@mixin high ($height) {
+    height: $height;
+}
+// 单行文本溢出省略号
+@mixin sgTextOE () {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+// 多行文本溢出省略号
+@mixin mlTextOE ($lines: 2) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    overflow: hidden;
+}
+// flex兼容
+@mixin flexBox () {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+@mixin flexGrow ($grow: 0) { 
+    -webkit-box-flex: $grow;
+    flex-grow: $grow;
+}
+@mixin jusContent ($jus: flex-start) {
+    justify-content: $jus;
+}
+
+// 分辨率背景图片
+@mixin screenPiexl($val) {
+
+    @media screen and (min-width: 320px) {
+      background: url("../../../../Image/phone/"+$val+"320.png") no-repeat top center/100% auto;
+    }
+
+    @media screen and (min-width: 360px) {
+      background: url("../../../../Image/phone/"+$val+"360.png") no-repeat top center/100% auto;
+    }
+
+    @media screen and (min-width: 375px) {
+       background: url("../../../../Image/phone/"+$val+"375.png") no-repeat top center/100% auto;
+    }
+
+    @media screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+       background: url("../../../../Image/phone/"+$val+"375.png") no-repeat top center/100% auto,url("../../../../Image/phone/"+$val+".png") no-repeat bottom center/100% auto;
+    }    
+
+    @media screen and (min-width: 414px) {
+       background: url("../../../../Image/phone/"+$val+"414.png") no-repeat top center/100% auto;
+    }
+
+}
+

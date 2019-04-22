@@ -1,0 +1,106 @@
+<div class="page" data-page="eventSearch_en" id="eventSearch_en" style="box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <!-- 标题 -->
+            <div class="left sliding auth_name_get">
+                Event query
+            </div>
+            <div class="right">
+                <a class="link icon-only panel-open" href="/setPage/" id="setPageTool">
+                    <i class="iconfont icon-f7_right_user">
+                    </i>
+                </a>
+                <a href="#" id="scan" onclick="RichScan()">
+                    <i class="iconfont icon-scanIcon">
+                    </i>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <div class="page-content eventSearchPageContent ">
+        <div class="eventSearchContent">
+            <div class="event-search-box">
+                <div class="half-select-box">
+                    <label>
+                        Time span:
+                    </label>
+                    <div class="half-select-box-input">
+                        <input id="eventSearchTimeId" placeholder="Time period selection" readonly="readonly" type="text"/>
+                    </div>
+                </div>
+                <button class="col button button-fill color-blue" onclick="searchEquipItems()">
+                    Query
+                </button>
+                <div class="half-select-box-bottom">
+                    <label>
+                        Events:
+                    </label>
+                    <input id="eventSearchEquipId" placeholder="Please select equipment" type="text"/>
+                    <input id="eventSearchTypeId" placeholder="Please select events" type="text"/>
+                </div>
+            </div>
+            <!-- Tabs, tabs wrapper -->
+            <div class="tabs">
+                <!-- Tab 1, active by default -->
+                <div class="tab tab-active" id="tab1">
+                    <div class="content-block tab-content-box">
+                        <div class="tab-table-header">
+                            <span>
+                                Time
+                            </span>
+                            <span>
+                                Device name
+                            </span>
+                            <span>
+                                Device events
+                            </span>
+                        </div>
+                        <ul id="eventSearchEquipsId">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tab 2 -->
+                <div class="tab" id="tab2">
+                    <div class="content-block tab-content-box">
+                        <div class="tab-table-header">
+                            <span>
+                                Time
+                            </span>
+                            <span>
+                                Device name
+                            </span>
+                            <span>
+                                Set events
+                            </span>
+                        </div>
+                        <ul id="eventSearchSetId">
+                            <!--<li>
+								<span>2018/12/23 18:30:47</span>
+								<span>登录信息:用户“ admin ”在服务端登录成功!"</span>
+							</li>-->
+                        </ul>
+                    </div>
+                </div>
+                <!-- Tab 3 -->
+                <div class="tab" id="tab3">
+                    <div class="content-block tab-content-box">
+                        <div class="tab-table-header">
+                            <span>
+                                Time
+                            </span>
+                            <span>
+                                System event
+                            </span>
+                        </div>
+                        <ul id="eventSearchSystemId">
+                            <!--<li>
+								<span>2018/12/23 18:30:47</span>
+								<span>登录信息:用户“ admin ”在服务端登录成功!"</span>
+							</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

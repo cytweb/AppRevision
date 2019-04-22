@@ -1,0 +1,184 @@
+﻿<div class="page" data-page="eventQuery" id="eventQuery">
+	<div class="navbar">
+		<div class="navbar-inner">
+			<!-- 标题 -->
+			<div class="left sliding auth_name_get">
+				<a class="back link" href="#">
+					<i class="iconfont icon-back">
+                    </i>
+				</a>					
+                事件查询
+			</div>
+			<div class="right">
+				<a class="link icon-only panel-open" href="/setPage/">
+					<i class="iconfont icon-f7_right_user">
+                    </i>
+				</a>
+			
+			</div>
+		</div>
+	</div>
+	<div class="page-content">
+		<div id="touchId" class="fab fab-right-top color-yellow" style="z-index: 999999999;">
+						<a href="#" class="sheet-open" data-sheet=".sheet-eventQu">
+							<i class="iconfont icon-sousuo"></i>
+						</a>
+					</div>
+		<div class="eventQueryContent">
+			
+			<div class="row no-gap equipCon">
+				<!--<div class="col-25">
+                    <ul class="equipList equipListQuery">
+                    </ul>
+                </div>-->
+				<!--<div class="col-75">-->
+				<p class="segmented tabList tabListQuery">
+					<a class="tab-link tab-link-active button" href="#equipEventContent">
+						设备事件
+					</a>
+					<a class="tab-link button" href="#setEventContent">
+						设置事件
+					</a>
+					<a class="tab-link button" href="#stsEventContent">
+						系统事件
+					</a>
+				</p>
+				<div class="tabs-animated-wrap eventWrap">
+					
+					<div class="tabs">
+						<div class=" tab tab-active" id="equipEventContent">
+							<div class="list accordion-list" style="margin: 0;">
+								<li class="accordion-item">
+									<a href="#" class="item-content item-link">
+										<div class="item-inner">
+											<div class="item-title">${dat[i].event}</div>
+											<div class="item-after"></div>
+										</div>
+									</a>
+									<div class="accordion-item-content">
+										<div class="block">
+
+											<div class="row  eventList">
+												<div class="col-35 name">设备名称：</div>
+												<div class="col-65 con">${dat[i].equip_nm}</div>
+											</div>
+											<div class="row  eventList">
+												<div class="col-35  name">设备事件：</div>
+												<div class="col-65 con">${dat[i].event}</div>
+											</div>
+											<div class="row  eventList">
+												<div class="col-35  name">时间：</div>
+												<div class="col-65 con">${dat[i].time}</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+						<div class=" tab" id="setEventContent">
+							<div class="list accordion-list" style="margin: 0;">
+								<li class="accordion-item">
+									<a href="#" class="item-content item-link">
+										<div class="item-inner">
+											<div class="item-title">${dat[i].event}</div>
+											<div class="item-after"></div>
+										</div>
+									</a>
+									<div class="accordion-item-content">
+										<div class="block">
+											<div class="row  eventList">
+												<div class="col-35  name">设备名称：</div>
+												<div class="col-65 con">${dat[i].equip_nm}</div>
+											</div>
+											<div class="row  eventList">
+												<div class="col-35  name">设置事件：</div>
+												<div class="col-65 con">${dat[i].event}</div>
+											</div>
+											<div class="row  eventList">
+												<div class="col-35  name">时间：</div>
+												<div class="col-65 con">${dat[i].time}</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+						<div class=" tab" id="stsEventContent">
+							<div class="list accordion-list" style="margin: 0;">
+								<li class="accordion-item">
+									<a href="#" class="item-content item-link">
+										<div class="item-inner">
+											<div class="item-title">${dat[i].event}</div>
+											<div class="item-after"></div>
+										</div>
+									</a>
+									<div class="accordion-item-content">
+										<div class="block">
+											<div class="row  eventList">
+												<div class="col-35  name">系统事件：</div>
+												<div class="col-65 con">${dat[i].event}</div>
+											</div>
+											<div class="row  eventList">
+												<div class="col-35  name">时间：</div>
+												<div class="col-65 con">${dat[i].time}</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--</div>-->
+			</div>
+		</div>
+	</div>
+	<div class="sheet-modal sheet-condition sheet-eventQu">
+		<div class="toolbar">
+			<div class="toolbar-inner">
+				<div class="left">
+					<a class="link sheet-close" href="#">取消</a>
+				</div>
+				<div class="right">
+					<a class="link" href="#" onclick="selectEvent()">确定</a>
+				</div>
+			</div>
+		</div>
+		<div class="sheet-modal-inner">
+			<div class="block">
+				<div class="list no-hairlines-md">
+					<ul>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="item-title item-label">日期选择</div>
+								<div class="item-input-wrap">
+									<input type="text" placeholder="选择查询日期段" readonly="readonly" id="condition-timepiker">
+									<span class="input-clear-button"></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+				<form class="searchbar eventQu">
+					<div class="searchbar-inner">
+						<div class="searchbar-input-wrap">
+							<input type="search" placeholder="设备名称">
+							<i class="searchbar-icon"></i>
+							<span class="input-clear-button"></span>
+						</div>
+						<span class="searchbar-disable-button">取消</span>
+					</div>
+				</form>
+				<div class="eq-list list">
+					<ul>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</div>

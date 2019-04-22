@@ -1,0 +1,667 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GWServiceWebApi</name>
+    </assembly>
+    <members>
+        <member name="T:GWServiceWebAPI.WebService1">
+            <summary>
+            WebService1 的摘要说明
+            </summary>
+        </member>
+        <member name="M:GWServiceWebApi.Common.SqlChecker.#ctor(System.Web.HttpRequest,System.Web.HttpResponse)">
+            <summary>
+            由此构造函数创建的对象,在验证Sql注入之后将停留在原来页面上
+            </summary>
+            <param name="_request">当前请求的 Request 对象</param>
+            <param name="_response">当前请求的 Response 对象</param>
+        </member>
+        <member name="M:GWServiceWebApi.Common.SqlChecker.#ctor(System.Web.HttpRequest,System.Web.HttpResponse,System.String)">
+            <summary>
+            由此构造函数创建的对象,在验证Sql注入之后将请求将导向由 _safeUrl 指定的安全url页面上
+            </summary>
+            <param name="_request">当前请求的 Request 对象</param>
+            <param name="_response">当前请求的 Response 对象</param>
+            <param name="_safeUrl">验证Sql注入之后将导向的安全 url</param>
+        </member>
+        <member name="P:GWServiceWebApi.Common.SqlChecker.KeyWord">
+            <summary>
+            只读属性 SQL关键字
+            </summary>
+        </member>
+        <member name="P:GWServiceWebApi.Common.SqlChecker.RegexString">
+            <summary>
+            只读属性过滤特殊字符
+            </summary>
+        </member>
+        <member name="P:GWServiceWebApi.Common.SqlChecker.Msg">
+            <summary>
+            当出现Sql注入时需要提示的错误信息(主要是运行一些客户端的脚本)
+            </summary>
+        </member>
+        <member name="M:GWServiceWebApi.Common.SqlChecker.CheckRequestQuery">
+            <summary>
+            检查URL参数中是否带有SQL注入的可能关键字。
+            </summary>
+            <returns>存在SQL注入关键字时返回 true，否则返回 false</returns>
+        </member>
+        <member name="M:GWServiceWebApi.Common.SqlChecker.CheckRequestForm">
+            <summary>
+            检查提交表单中是否存在SQL注入的可能关键字
+            </summary>
+            <returns>存在SQL注入关键字时返回 true，否则返回 false</returns>
+        </member>
+        <member name="M:GWServiceWebApi.Common.SqlChecker.CheckKeyWord(System.String)">
+            <summary>
+            检查_sword是否包涵SQL关键字
+            </summary>
+            <param name="_sWord">需要检查的字符串</param>
+            <returns>存在SQL注入关键字时返回 true，否则返回 false</returns>
+        </member>
+        <member name="M:GWServiceWebApi.Common.SqlChecker.Check">
+            <summary>
+            执行Sql注入验证
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWgenerateCaptchaCodeController.GenerateCaptchaCode">
+            <summary>
+            生成随机数
+            </summary>
+            <param >
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWgenerateCaptchaCodeController.CreateValidateGraphicCore">
+            <summary>
+            验证码
+            </summary>
+            <param>
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWgenerateCaptchaCodeController.set_GenerateImageData">
+            <summary>
+            生成验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_JMdata(Newtonsoft.Json.Linq.JObject)">
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+             其他接口
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+            <summary>
+            解析用户名称
+            </summary>
+            <param name="list">
+            JMString 解密用户名称
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.set_DeleteTableData(Newtonsoft.Json.Linq.JObject)">
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+             实时快照及定时任务接口
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+            <summary>
+            删除数据 DELETE FROM getDataTable where tableVlue
+            </summary>
+            <param name="jb">
+            getDataTable 报表名称
+            tableVlue 报表数据
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.set_InsertNewTable(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            插入新数据 insert into getDataTable select tableVlue
+            </summary>
+            <param name="jb">
+            getDataTable 报表名称
+            tableVlue 报表数据
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.set_InsertNewTableValues(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            插入新数据 insert into getDataTable select tableVlue
+            </summary>
+            <param name="jb">
+            getDataTable 报表名称
+            tableVlue 报表数据
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.set_BatchUpdate(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            批量更新数据
+            </summary>
+            <param name="jb">
+            getDataTable 报表名称
+            cellDataList 更新数据
+            ifDataList 检索数据
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_LoopCycleList(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取循环任务
+            </summary>
+            <param name="jb">
+            dataTableIndex 报表编码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_CommonTaskEquipControl(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取普通任务:设备控制
+            </summary>
+            <param name="jb">
+            dataTableIndex 报表编码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_DataByTableNameAndID(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据表名、ID查询数据
+            </summary>
+            <param name="jb">
+            getDataTable 报表名称
+            dataTableIndex 报表编码
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_AdministratorData">
+            <summary>
+            获取实时快照数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_GWZiChanTableData">
+            <summary>
+            获取资产表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_VideoInfoData">
+            <summary>
+            获取视频信息数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_AlarmProcData">
+            <summary>
+            获取报警信息数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_PlanData">
+            <summary>
+            获取计划信息数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_ProcSpecTableData">
+            <summary>
+            获取特殊日期安排数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_ProcWeekTableData">
+            <summary>
+            获取每周任务安排数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_ProcCycleTListData">
+            <summary>
+            获取循环任务数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_SetParmData">
+            <summary>
+            获取设备控制数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getSetParmRadioList(System.Int32,System.Int32)">
+            <summary>
+            获取设备控制数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_ExProcCmdData">
+            <summary>
+            获取系统控制数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_ProcTimeTListData">
+            <summary>
+            获取普通任务列表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_DataForListStr(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            根据表名查询数据
+            </summary>
+            <param name="jb">
+            tType 表类型
+            equip_nos 设备号集合
+            yc_nos 遥测号集合
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_AlarmConfig(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取事件的报警配置
+            </summary>
+            <param name="jb">
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_RealTimeEvent(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取当前系统报警的实时事件
+            </summary>
+            <param name="jb">
+            event_Level_list 报警分类，多个值请用逗号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_RealTimeEventCount(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取当前实时报警事件的总数
+            </summary>
+            <param name="jb">
+            levels 报警分类，多个分类请用';'符号隔开，多个值请用逗号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.set_EventConfirm(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            确认当前报警事件
+            </summary>
+            <param name="jb">
+             msg:处理意见
+             shortmsg:是否发送短信
+             tel:发送人的电话
+             evtname:事件名
+             time:事件时间
+             userName: 用户名
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_EquipEventHistory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询设备事件
+            </summary>
+            <param name="jb">
+             times:时间，起始时间,结束时间;(当只有一个时间的时候，为起始时间)
+             equip_no_list:设备号，多个数据时请用“,”号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_SetEventHistory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询设置事件
+            </summary>
+            <param name="jb">
+             times:时间，起始时间,结束时间;(当只有一个时间的时候，为起始时间)
+             equip_no_list:设备号，多个数据时请用“,”号隔开
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_SystemEventHistory(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            查询系统事件(仅支持管理员)
+            </summary>
+            <param name="jb">
+            times 时间，起始时间,结束时间;(当只有一个时间的时候，为起始时间)
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getLinkageList">
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+             设备数据及设备联动接口
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+            <summary>
+            获取设备联动配置列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.addLinkage(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            新增联动设置
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.deleteLinkage(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            删除联动设置
+            </summary>
+            <param name="req">req.id:ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.updateLinkage(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            修改联动设置
+            </summary>
+            <param name="req">req.id:ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.addScene(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            新增场景
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.deleteScene(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            删除场景
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.updateScene(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            修改场景设置
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getYcp(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取ycp表数据
+            </summary>
+            <param name="req">req.equip_nos:设备号</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getYxp(Newtonsoft.Json.Linq.JObject)" -->
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getSetparmList(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取setParm数据
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getEquipState">
+            <summary>
+            获取所有设备状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getJurisdictionData">
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+             首页及报警排表接口
+            -----------------------------------------------------------------------------------------------------------------------------------------------
+            <summary>
+            获取首页模块数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_EquipGroupData">
+            <summary>
+            获取设备组数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getEquipList">
+            <summary>
+            获取设备表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_EquipData">
+            <summary>
+            获取设备表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_AlmReportData">
+            <summary>
+            获取报警排表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_WeekAlmReportData">
+            <summary>
+            获取周排表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.get_SpeAlmReportData">
+            <summary>
+            获取特定日期排表数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.updateEquipGroup(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            更新数据
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.nullTableCell(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            清空字段
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.insertEquipGroup(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            插入数据
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.deleteEquipGroup(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="obj">
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.gwPushGroupInfo(System.String)">
+            <summary>
+              获取推送分组信息
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getClientTypeInfo">
+            <summary>
+            获取client信息
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getWelcomeSpeech">
+            <summary>
+            WelcomingSpeech 欢迎词最新一条记录
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.insertWelcomeSpeech(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            WelcomingSpeech 欢迎词插入一条记录
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getLanguageStatus(System.String)">
+            <summary>
+            中英文切换查询
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.insertLanguageStatus(System.String,System.Int32)">
+             <summary>
+            中英文切换插入记录
+             </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.insertChatInfo(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+             插入聊天记录..........................................................................
+            </summary>
+            <param name="jb">
+            sendUser 发送用户名
+            receiveUser 接收用户名
+            conceTxt 发送信息
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.ReadChatInfo(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+             聊天信息读取
+            </summary>
+            <param name="jb">
+            sendUser 发送用户名
+            receiveUser 接收用户名
+            conceTxt 发送信息
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.SaveTxt(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            保存聊天记录 "c:\\MsgChat"
+            </summary>
+            <param name="fileUrl"></param>
+            <param name="sendName"></param>
+            <param name="receiveName"></param>
+            <param name="DateTime"></param>
+            <param name="concentext"></param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.ReadTxt(System.String,System.String,System.String)">
+            <summary>
+            读取聊天记录c:\\MsgChat
+            </summary>
+            <param name="fileUrl"></param>
+            <param name="fileName"></param>
+            /// <param name="DateTime"></param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.readUrlRecord(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            读取某次聊天记录
+            </summary>
+            <param name="jb"></param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.readyEndRecord(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            读取聊天记录c:\\MsgChat 存在的最后一条记录
+            </summary>
+            <param name="jb">
+            sendName 发送用户名
+            receiveName 接收用户名
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.gwFixeddateNotice">
+            <summary>
+            获取当天通知数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.gwFixeddateNoticeRadio(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            获取当天通知数据
+            </summary>
+            <param name="jb">
+            set_no 遥信设置号
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getSetNoData(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+              获取指定set_no通知数据
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getNoticeID">
+            <summary>
+              获取通知最大ID
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getNoticeRangeID(System.Int32)">
+            <summary>
+              获取通知范围内数据
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getCallRecord(System.String,System.Int32,System.String)">
+            <summary>
+             获取呼叫记录
+            </summary>
+            <param>
+            str 包含字符
+            equip_no 设备号
+            timeStr 日期字符串
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.getFixedCallRecord(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+             获取固定呼叫记录
+            </summary>
+            <param>
+            str 包含字符
+            equip_no 设备号
+            set_no 遥信遥测号
+            timeStr 日期字符串
+            </param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.gw_push_message">
+            <summary>
+              获取手机存储信息
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.GWServiceWebAPIController.insertNoticeRecord(Newtonsoft.Json.Linq.JObject)">
+            <summary>
+              插入通知数据
+            </summary>
+            <param name="jb">
+            userName 用户名
+            set_no 遥信设置号
+            position 呼叫位置
+            callTime 呼叫时间
+            </param>
+        </member>
+        <member name="P:GWServiceAPI.Net.Controllers.ValidateCode.MaxLength">
+            <summary>
+            验证码的最大长度
+            </summary>
+        </member>
+        <member name="P:GWServiceAPI.Net.Controllers.ValidateCode.MinLength">
+            <summary>
+            验证码的最小长度
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.ValidateCode.CreateValidateCode(System.Int32)">
+            <summary>
+            生成验证码
+            </summary>
+            <param name="length">指定验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.ValidateCode.Str_char(System.Int32,System.Boolean)">
+            <summary>
+            生成随机纯字母随机数
+            </summary>
+            <param name="Length">生成长度</param>
+            <param name="Sleep">是否要在生成前将当前线程阻止以避免重复</param>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.ValidateCode.CreateValidateGraphicOne(System.String)">
+            <summary>
+            创建验证码的图片
+            </summary>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.ValidateCode.GetImageWidth(System.Int32)">
+            <summary>
+            得到验证码图片的长度
+            </summary>
+            <param name="validateNumLength">验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.ValidateCode.GetImageHeight">
+            <summary>
+            得到验证码的高度
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GWServiceAPI.Net.Controllers.ValidateCode.CreateValidateGraphic(System.String)">
+            <summary>
+            创建验证码的图片
+            </summary>
+            <param name="validateNum">验证码</param>
+        </member>
+    </members>
+</doc>

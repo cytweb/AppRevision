@@ -1,0 +1,78 @@
+﻿
+    <div data-page="setPage_en" class="page" id="setPage_en">
+        <div  class="page-content setPageContainer" style="padding-top: 0!important;">
+              <div class="userClassName">
+                  <i class="iconfont icon-f7_right_user"></i>
+                  <p ></p>
+              </div>
+            <div class="list simple-list">
+            <ul>
+<!--                 <li>
+                    <a href="#" class="item-link smart-select smart-select-init" id="voiceList" onchange="onVoiceList_en()" data-page-back-link-text="">
+                        <select name="voiceTop">
+                            <option value="1" selected="selected" data-value = "0">Pilot flight</option> 
+                            <option value="2" data-value = "3">Microsoft</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-f7_voice"></i></div>
+                            <div class="item-inner" id="voiceListName">
+                                <div class="item-title">voice service</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>  -->    
+                <li>
+                    <a href="#" class="item-link smart-select smart-select-init" id="languageList" onchange="selectLanguage_en()" data-page-back-link-text="">
+                        <select name="languageTop">
+                            <option value="0" selected="selected">Chinese</option> 
+                            <option value="1" >English</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-f7_language"></i></div>
+                            <div class="item-inner" id="languageListName">
+                                <div class="item-title">Language</div>
+                            </div>
+                        </div>
+                    </a>
+                </li>                           
+                  <li>
+                    <a href="#" class=" item-content">
+                        <div class="item-content">
+                            <div class="item-media"><i class="iconfont icon-f7_modul"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Night mode</div>
+                                <div class="item-content">
+                                    <label class="toggle toggle-init  color-green" id="transformBg">
+                                      <input type="checkbox" >
+                                      <span class="toggle-icon"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                  </li>
+                    <li>
+                        <a href="#" class="item-link item-content" onclick="onAppCacheClear()">
+                            <div class="item-content">
+                                <div class="item-media"><i class="iconfont icon-f7_clear"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">Wipe cache</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li> 
+                    <li>
+                        <a href="#" class="item-link item-content" onclick="onAbout()">
+                            <div class="item-content">
+                                <div class="item-media"><i class="iconfont icon-f7_about"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">About</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+          </div>
+          <button class="col button button-fill color-pink exitLogin" onclick="onUserLogout()">Cancellation</button>
+        </div>
+    </div>

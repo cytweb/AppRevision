@@ -1,0 +1,18 @@
+/*title*/
+.selectTab{color: #2d8cf0 !important;}
+.HomeButton_title a{position: relative;}
+.HomeButton_title a:nth-child(1):after{content: "";width: 1px;height: 50%;position: absolute;right: 0;top: 25%;border-right: 1px solid rgb(224, 203, 178);}
+
+
+/*content*/
+.selectBtb{ overflow: hidden;}
+.selectBtb p{color: white;position: relative;z-index: 1;}
+.selectBtb:after{content: "";width: 50px;height: 50px;display: inline-block;border-radius: 50%;outline: none;position: absolute;left: 50%;top: 50%;
+transform: scale(0);margin-left: -25px;margin-top: -25px;background: rgb(245, 190, 126);
+animation: animationCircle 1s ease-in 0s;animation-fill-mode : forwards;
+}
+@keyframes animationCircle{
+  0%{transform: scale(0);}
+  100%{transform: scale(3);}
+
+}

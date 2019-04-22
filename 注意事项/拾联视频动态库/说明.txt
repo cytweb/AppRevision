@@ -1,0 +1,9 @@
+GWQYVideo.NET.dll 放在alarmcenter dll目录下
+
+qysdk.dll、VideoRealLib.dll   放在alarmcenter bin目录下
+
+
+GWVedioConfiguration.dll  在目录D:\AlarmCenter\AddIns\AddIns\AlarmCenter\ConfigTools\GWVedioConfiguration
+
+
+

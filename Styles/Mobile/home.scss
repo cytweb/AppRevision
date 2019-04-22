@@ -1,0 +1,207 @@
+﻿/*
+mixin：sass宏mixin
+*/
+@charset "utf-8";
+@import 'public.scss';
+#container {
+    height: 100%;
+}
+.view .toolbar .toolbar-inner > a.active{
+    color: #2d8cf0;
+}
+#homeContents{
+    width: 100%;height: 100%;overflow-y: auto; padding: 1rem 0.5rem 50px 0.5rem;
+    &>ul.charts-block{
+      width: 100%;
+        &>li{ 
+          width: 100%;text-align: center;padding-top: 10px;margin-top: 2.5rem;margin-bottom: 3.5rem;
+          h3{text-align: left;
+          i{font-size: 1.5rem;margin-right: 10px;vertical-align: middle;position: relative;top: -2px;}}  
+          li{margin-top: 10px;
+              .homeBtn{
+                width: 100%;height: 100%;display: inline-block; position: relative;
+                i{font-size: 2rem;color: #{$situationContainerBgc};border-radius: #{$homeBtnBorderRadius};     
+                padding: 0.3rem 0.8rem;margin-bottom: 10px;background: #{$homeConfigBtnBg};display: inline-block;}
+                p{margin: 0; }
+                img{width: 40%;}
+              }
+          }
+          .commonlyUsed,.sysFourMenu{
+            padding: 10px 0px;
+            li{ 
+              a{
+                width: 100%;height: 100%;display: inline-block;
+                i{
+                  font-size: 2rem;color: #{$situationContainerBgc};border-radius: #{$homeBtnBorderRadius};    
+                  padding: 0.3rem 0.8rem;margin-bottom: 10px;    background: #{$homeConfigBtnBg};display: inline-block;
+                 }
+                p{margin: 0;}
+              }
+            }
+          }
+        }
+        .HomeSnapShot {margin-top: 2.5rem;margin-bottom: 4rem;}
+        .HomeShortcutFunction{
+         
+          &>section{
+            width: 100%;overflow-x: auto;
+            &>aside{
+              width: 600px;
+              &>div{
+                width: 48%;
+                display: inline-block;
+                float: left; 
+                text-align: left;
+                &>div.pptPatternHeader{
+                 
+                  padding: 10px;
+                  background: #{$situationContainerBgc};
+                  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+                  border-radius: 12px 12px 0px 0px;
+
+                  &>span:nth-child(1){
+                    position: relative;margin-bottom: 15px;
+                      &>a{
+                        width: 60px;
+                        height: 60px;
+                        line-height: 57px;
+                        i{color: #{$allFontColor};font-size: 2rem;}text-align: center;background: url(../../Image/phone/rect.png) no-repeat center/100% 100%;}
+                  };
+                  &>span:nth-child(2){
+                    &>a{
+                    width: 60px;
+                    height: 60px;
+                    line-height: 57px;
+                      i{color: #{$allFontColor};font-size: 2rem;}
+                    text-align: center;background: url(../../Image/phone/rect.png) no-repeat center/100% 100%;}
+                  }
+                  h3{text-align: left;    white-space: nowrap;}
+                }
+                p{
+                  color: #{$allFontColor};margin: 0;text-indent: 10px;
+                  padding: 5px 0;background-image: linear-gradient(-135deg, #FF6642 0%, #FD6000 53%, #FF3B98 100%);
+                  box-shadow: 0 4px 16px 0 rgba(255,102,66,0.50);
+                  border-radius: 0px 0px 12px 12px;
+                }
+              }
+              &>div:nth-child(1){margin-right: 4%;}
+              &>:after{content: "";width: 100%;height: 1px;clear: both;}
+            }
+        }  }  
+        .HomeSystemMenu{ 
+          margin-top: 2.5rem; 
+          &>ol{background: #{$situationContainerBgc}; box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10); margin-bottom: 5px;}
+          &>ol:nth-child(1){border-radius: 12px 12px 0px 0px;}
+          // &>ol:nth-child(2){border-radius: 0px 0px 12px 12px;}
+
+        }
+
+        .statisticsTable{
+          text-align: center;
+          a{font-size: 12px;position: relative;border-radius: 6px; p{font-family: serif;font-size: 1.5rem;margin: 0.2rem 0 0 0;text-align: center;} }
+          a:nth-of-type(1) {background: linear-gradient(-135deg, #FA4A83 0%, #F22424 100%);box-shadow: 0 4px 16px 0 rgba(242,36,51,0.50);}
+          a:nth-of-type(2) {background-image: linear-gradient(-135deg, #FA9C4A 0%, #F25224 100%);box-shadow: 0 4px 16px 0 rgba(242,82,36,0.50);}
+          a:nth-of-type(3) {background-image: linear-gradient(-135deg, #11EAFB 0%, #0796F6 100%);box-shadow: 0 4px 16px 0 rgba(7,150,246,0.50);}
+          a:nth-of-type(4) {background-image: linear-gradient(-134deg, #FED955 0%, #FAA952 100%);box-shadow: 0 4px 16px 0 rgba(250,169,82,0.50);}
+          a:nth-of-type(5) {background-image: linear-gradient(-135deg, #73D443 0%, #87A920 100%);box-shadow: 0 4px 16px 0 rgba(135,169,32,0.50);}
+        }
+    }
+    // 配置项目---富士康
+    &>div{margin-top: 10px;}
+   .HomeButton{
+       box-shadow: 1px 1px 1px #{$situationBoxShadow},-1px 0px 1px #{$situationBoxShadow}; width: 100%;text-align: center;padding: 10px;overflow: hidden; background: #{$statsBgc}; 
+        &>div.HomeButton_title{ margin-bottom: 20px;border-bottom: 1px solid #{$selectedColor}; &>a{height: 100%;padding: 1rem 0;display: inline-block;color: #414141;  }}
+        &>ul{&>li{overflow: hidden;margin-bottom: 10px;
+        &>a{font-size: #{$tableHeaderFontSize*0.8};width: 100%;height: 100%;display: inline-block;text-align: center;border: 1px solid #{$statsBorderColor};position: relative;&>p{margin: 0.5rem 0;color: #414141;}}}}
+    }
+    //幻灯片
+    .swiper-paginationTrailer{
+      width: 100%;position: absolute;bottom: -1%;left: 50%;transform: translateX(-50%);
+      &>span{margin: 0px 1%;}
+      .swiper-pagination-bullet-active{box-shadow: 1px 1px 20px #{$unclickBorderColor}, -1px -1px 20px #{$unclickBorderColor};}
+     }
+    .homeControlFunction:after{ content: "";flex: 0.7;}
+}
+
+//动画
+.startAnimation{animation: rotate 1s ease-in 0s;}
+@keyframes shadow {
+    0%, 100% {transform: scaleX(1);}
+    50% {transform: scaleX(1.2);}
+}
+
+@keyframes rotate {
+    0% {
+    transform: translateY(0);
+     }
+    25% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(20px) scale(1.1, 0.9);
+    }
+    75% {
+        ransform: translateY(10px) ;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+//popover
+
+.popup-public{
+  z-index: 19999;left: 0!important;top: 0!important;
+  .publicHeader{
+    height: 60px;line-height: 60px;background: #{$popupBackground};box-shadow: 0 3px 6px 0 rgba(0,0,0,0.20);text-align: center;
+    &>div{
+      position: absolute;left: 0;width: 20%;height: 60px;line-height: 60px;
+      i{font-size: 1rem;}
+    }
+    &>span{font-size: 1.2rem;width: 100%;height: 100%;line-height: 60px;text-align: center;display: inline-block;}    
+  }
+  &>section{
+    position: absolute;top: 60px;right: 0;bottom: 0;left: 0;
+    &>.popoverSystemMenu{
+      width: 100%;height: 100%;
+       &>a{color: #{$popupbtnColor};width: 90%;margin: 25px 0 0 5%;padding: 15px 0;text-align: center;display: inline-block;background: #{$popupbtnBgColor}; box-shadow: 0 4px 16px 0 #{$popupbtnBoxShadow}; border-radius: 6px; }
+    }
+   &>.popoverSceneBtn{
+        height: 100%;padding: 30px 10px;overflow-y: auto;
+        // &>h4{
+        //   width: 100%;position: relative;
+        //   &>span{font-size: 1.1rem;}
+        // }
+        // &>h4:after{    content: "";
+        // width: 77%;
+        // height: 1px;
+        // border-bottom: 1px solid;
+        // display: inline-block;
+        // position: absolute;
+        // left: 23%;
+        // top: 50%;
+        // transform: translateY(-50%);}
+        &>a{
+          text-align: center;
+          background: #{$popupBackground};
+          box-shadow: 0 4px 16px 0 rgba(0,0,0,0.1);
+          border-radius: 12px;
+          padding: 8px 0;
+          margin-bottom: 20px;
+          span{i{font-size: 2.5rem;}}
+          p{
+            opacity: 0.7;margin: 0;
+            font-size: 0.8rem;
+            color: #2D2E30;
+            letter-spacing: 0;
+            text-align: center;white-space: nowrap;    text-overflow: ellipsis; overflow: hidden;
+          }
+        }
+     }
+     &>.popoverSceneBtn:after {content: ""; flex: 0.85; }
+
+
+  }
+}
+

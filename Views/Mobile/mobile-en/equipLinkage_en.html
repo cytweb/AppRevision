@@ -1,0 +1,56 @@
+﻿<div class="page" data-page="equipLinkage_en" id="equipLinkage_en">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <!-- 标题 -->
+            <div class="left sliding auth_name_get">
+               Equipment linkage
+            </div>
+            <div class="right">
+                <a class="link icon-only panel-open" href="/setPage/" id="setPageTool">
+                    <i class="iconfont icon-f7_right_user">
+                    </i>
+                </a>
+                <a href="#" id="scan" onclick="RichScan()">
+                    <i class="iconfont icon-scanIcon">
+                    </i>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="equipLinkageContainer">
+            <div class="subnavbarTabel row no-gap">
+                <a class="col-50 selectScheduleMenu" href="#equipLinkage_set">
+                    Linkage setup
+                </a>
+                <a class="col-50" href="#equipLinkage_edit">
+                    Scene editing
+                </a>
+            </div>
+            <div class="equipLinkageContent">
+                <section class="equipGroupPublic" id="equipLinkage_set">
+                    <ul class="publicTable">
+                    </ul>
+                </section>
+                <section class="displayNone list accordion-list" id="equipLinkage_edit">
+                    <ul>
+                    </ul>
+                </section>
+                <div class="scheduleRightBottomBtn transformReportingMenu">
+                    <a class="link" href="#" id="equipLinkage_set_nav" >
+                         <span>
+                             <button onclick='newlyBuildLinkage_en(" "," "," "," "," "," "," "," ",getMaxID_en(),2);'>Newly added</button>
+                         </span>
+                        <img src="/Image/phone/directionjt.png" alt="" onclick="transformReportingObstaciesMenu1()"/>
+                    </a>
+                    <a class="link displayNone" href="#" id="equipLinkage_edit_nav" >
+                         <span>
+                             <button onclick="scanelEdit_en(this,2);">Newly added</button>
+                         </span>
+                        <img src="/Image/phone/directionjt.png" alt="" onclick="transformReportingObstaciesMenu1()"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

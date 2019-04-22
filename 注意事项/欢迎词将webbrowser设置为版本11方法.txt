@@ -1,0 +1,4 @@
+1、点击win键，输入regedit，打开注册表；
+2、打开注册表路径“计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_BROWSER_EMULATION”
+3、新建DWORD（32位）值（D）
+4、将新建的项改名称为AlarmCenter.exe，改数据为十进制的11000
